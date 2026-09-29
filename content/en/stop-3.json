@@ -1,0 +1,12 @@
+{
+  "id": "stop-3",
+  "number": "03",
+  "word": "How it is financed",
+  "gloss": "Money has a color",
+  "stub": true,
+  "lede": "Z&C built its own capital structure because a fund could not do what it needed, then built instruments so zebra companies could raise money without accepting a timeline that kills the mission.",
+  "lede_draft": true,
+  "blocks": [
+    { "type": "stub", "text": "Second pass. Planned blocks: Z&C is not a fund (pp.40-41); Money has a color (pp.50-51); LIFE type1 (pp.44-45); TOC x TOC (p.48); the two TOCs (pp.12-13, 104-105); the due diligence rubric (pp.46-47). Waiting on the English TOC diagrams from Z&C." }
+  ]
+}

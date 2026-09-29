@@ -1,0 +1,49 @@
+/* Per-stop layout */
+
+.stop__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--space-4);
+  margin-bottom: clamp(var(--space-7), 6vw, var(--space-9));
+}
+.stop__num {
+  font-family: var(--font-display);
+  font-size: var(--size-label);
+  letter-spacing: var(--track-label);
+  color: var(--text-muted);
+}
+.stop__lede {
+  font-size: clamp(18px, 1.7vw, 24px);
+  line-height: 1.6;
+  max-width: 34ch;
+}
+
+/* Two-column: heading left, content right, on wide screens */
+@media (min-width: 1100px) {
+  .stop__grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 380px) minmax(0, var(--container-text));
+    column-gap: var(--space-9);
+    align-items: start;
+  }
+  .stop__grid > .stop__head {
+    position: sticky;
+    top: var(--space-9);
+    margin-bottom: 0;
+  }
+}
+
+/* Stop 5: one voice, generous white space */
+.stop--objection {
+  background: var(--zc-black);
+  color: var(--zc-white);
+  border-top: 0;
+  padding-block: clamp(var(--space-10), 14vw, var(--space-12));
+}
+.stop--objection h2, .stop--objection .stop__num, .stop--objection .eyebrow { color: var(--zc-white); }
+.stop--objection .quote { border-color: var(--zc-white); }
+.stop--objection .quote footer { color: var(--zc-grey-400); }
+.stop--objection .quote--bare p { color: var(--zc-white); }
+.stop--objection + .stop { border-top: 0; }
+
+/* Case credit strip placeholder etc. arrive in pass two */

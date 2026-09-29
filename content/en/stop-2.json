@@ -1,0 +1,94 @@
+{
+  "id": "stop-2",
+  "number": "02",
+  "word": "What a zebra is",
+  "gloss": "The definition Z&C refuses to fix",
+  "lede": "A zebra company balances social and economic value. Z&C has deliberately refused to turn that into a checklist, which is a position, not a gap.",
+  "lede_draft": true,
+  "blocks": [
+    {
+      "type": "prose",
+      "draft": true,
+      "src": "p.25",
+      "paragraphs": [
+        "When we began in 2021, we summarized zebra company management into four features, alongside the three characteristics advocated by {{term:zebras-unite}}. Many people asked us for a clear definition. We felt it was too early to define it in a checklist-like manner, and we did not think it was right to have it defined so rigidly in the first place. Three years on, the two lists below still describe what we mean: characteristics that view zebra management as a path to be explored over the long term."
+      ]
+    },
+    {
+      "type": "twin",
+      "src": "p.25",
+      "left": {
+        "title": "The 3 characteristics of zebra companies",
+        "sub": "Advocated by Zebras Unite",
+        "items": [
+          { "text": "Prioritizes both social and economic goals and values mutualism, or a coexistence as a group or herd." },
+          { "text": "Challenges socially complex problems that require greater awareness and understanding." },
+          { "text": "Searches for new financial models that fit zebra companies, rather than fitting into existing financial systems." }
+        ]
+      },
+      "right": {
+        "title": "The 4 characteristics of zebra management",
+        "sub": "Summarized by Zebras and Company",
+        "items": [
+          { "strong": "Aims to create a better society through business growth", "text": "Maximizing revenue and profits is not the end goal; rather, they focus on addressing societal issues as the purpose of their business." },
+          { "strong": "Relies on diverse assets such as time, creativity, and community", "text": "The business is not a simplistic venture that can succeed in a short time with funding alone, but rather one that addresses complex challenges with intertwining elements." },
+          { "strong": "Adopts a long-term and inclusive management stance", "text": "Rather than maximizing shareholder value in the short term, management is conducted with the intention to make all stakeholders happy in the long term." },
+          { "strong": "Shares vision and executes it with aligned actions", "text": "The business recognizes the trade-offs between diverse elements, and it also envisions a concrete to-be vision that it acts on daily." }
+        ]
+      }
+    },
+    {
+      "type": "quote",
+      "src": "p.25",
+      "text": "A \"zebra company\" is more than just a new type of enterprise; it contains the essential question, \"for whom and for what purpose is management conducted?\"",
+      "who": "Zebras and Company",
+      "role": "What is a Zebra Company?, p.25"
+    },
+    {
+      "type": "founders",
+      "src": "p.34",
+      "heading": "Ten founders, one question",
+      "question": "What does \"balancing social impact and economic viability\" mean to you?",
+      "intro": "The report asked its portfolio companies and advisory clients. Ten answered. They do not agree, and that is the point.",
+      "intro_draft": true,
+      "items": [
+        { "name": "Toshiko Fujimoto", "org": "Business with Attitude by FIGARO", "text": "A state where each person can work in their own way while having fun, enriching the people around them and society as a whole, and at the same time ensuring that they live in their own authentic way, from food, clothing, and housing, to daily life." },
+        { "name": "Yuya Nishimura", "org": "Essence, Inc.", "text": "When you consider the fundamental purpose of a business, it is to create or renew a certain state of society. The economy can be a driving force to make that change a going concern. Social value comes first, and economic viability exists as an option to achieve it." },
+        { "name": "Tadashi Matsuba", "org": "Iwamiginzan Gungendo Group", "text": "It means that business growth (economic viability) is linked to a state where the people we interact with are happy. It also means an economy that preserves and values culture, serving as a reminder not to let the economy run unchecked or to fall into the illusion of limitless growth. Businesses should operate with an awareness that social capital is finite." },
+        { "name": "Miai Kobayashi", "org": "Hitobito, Inc.", "text": "Economic viability means generating sales and profits at a scale that keeps stakeholders happy and allows reinvestment in the community. Beyond solving social issues, social impact is about acting ethically; avoiding behaviors or methods that make stakeholders or customers uncomfortable." },
+        { "name": "Hidenori Kuroyanagi", "org": "Linklusion, Ltd.", "text": "\"Social impact is the goal, economic viability is the prerequisite.\" Without economic viability, the business cannot be sustained or expanded, and social impact cannot be achieved. Conversely, economic viability can exist even without a purpose, or with a different one." },
+        { "name": "Tatsunari Takano", "org": "Eiji Press Inc.", "text": "Essentially, social impact and economic viability can be balanced, and it is only when they are balanced that both become sound and sustainable. Balancing them requires will and creativity, and that is the role of management." },
+        { "name": "Takaya Taguchi", "org": "Helical Fusion", "text": "In management, the two are inseparable. Without economic viability, a business can't take root in society; and when social demand is strong, the economics will follow. The balance simply varies in how and when each side takes shape." },
+        { "name": "Yasuhiro Tamura", "org": "Black Star Label", "text": "What matters is having your own definition of success. Not a success model confined to a single set of values, but one driven by your dreams, the past you want to rewrite, and the desire to create an original, alternative life, history, and future. That comes before even creating an original business." },
+        { "name": "Daisuke Saigusa", "org": "Shiojiri City Promotion Public Corporation / sunaba", "text": "Keep asking questions. Is your business truly creating the impact you envision? What will you do, or not do, to achieve it? How will you earn and reinvest revenue? Continuously exploring these questions with your team and stakeholders is key to how zebra companies balance social impact and economic viability." },
+        { "name": "Ryo Ishida", "org": "NEWLOCAL Inc.", "text": "It means ensuring that we are creating hope for all stakeholders through business growth. It is making decisions after considering the impact on a wider system beyond just the business. It is being in a state where our corporate activities are supported by a wide range of stakeholders beyond just our direct customers." }
+      ]
+    },
+    {
+      "type": "typology",
+      "src": "p.30",
+      "heading": "Parent, sibling, foal",
+      "intro": "Zebra companies are often assumed to belong to the startup world. In Japan, long-established and regional businesses responded immediately, and from that response came three categories.",
+      "intro_draft": true,
+      "items": [
+        { "title": "Parent zebras", "text": "Companies that conduct zebra-style management themselves while also supporting sibling zebras and fostering foal zebras. Often large, listed companies with top-level market share in their industry, who use various forms of capital they own to collaborate with other companies that share the zebra mindset.", "examples": "Examples: Japan Post, Marui, Yamaha Motor, Taiho Pharma" },
+        { "title": "Sibling zebras", "text": "Zebra companies that, while not publicly listed or having massive sales, play an important role in their region or industry and serve as role models for foal zebras. Long-established regional companies, which hold a unique presence in Japan, are perfect examples.", "examples": "Examples: Nakagawa Masashichi Shoten, Iwamiginzan Gungendo, Ueda Honsha" },
+        { "title": "Foal zebras", "text": "Zebra companies that are just starting out, perhaps as an extension of a personal business, and aim to grow to a certain scale to make an impact on society.", "examples": "" }
+      ]
+    },
+    {
+      "type": "quote",
+      "src": "p.62",
+      "text": "A company that solves a social issue and generates profit cannot be called a zebra if its employees are struggling with low wages. If solving one problem creates burdens elsewhere, that \"social value\" is fiction.",
+      "who": "Miai Kobayashi",
+      "role": "CEO, Hitobito Inc.; outside director, Zebras and Company"
+    },
+    {
+      "type": "quote",
+      "src": "p.126",
+      "text": "We are often asked for a clear definition of a \"zebra company,\" but we have intentionally chosen not to fix one. Instead, we want each organization to pursue its own interpretation of what a zebra company can be.",
+      "who": "Yohei Azakami",
+      "role": "Co-founder and CEO, Zebras and Company. Editors' Note"
+    }
+  ]
+}

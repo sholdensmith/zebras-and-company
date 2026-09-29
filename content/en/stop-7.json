@@ -1,0 +1,13 @@
+{
+  "id": "stop-7",
+  "number": "07",
+  "word": "Your map",
+  "gloss": "Draw your own theory of change",
+  "stub": true,
+  "lede": "The report ends by telling readers to draw their own theory of change. The site hands them the pen.",
+  "lede_draft": true,
+  "blocks": [
+    { "type": "quote", "src": "p.13", "text": "If you are thinking of starting something, we encourage you to draw your own TOC. Imagine the future, put the path to it into words, and draw the lines. It will surely be the first step in connecting you with someone else.", "who": "Zebras and Company", "role": "Theory of Change: Drawing a Map of Change, p.13" },
+    { "type": "stub", "text": "Second pass. Planned: the guided six-question tool using Z&C's due diligence questions (p.47) laid out on the logic model's stages (p.48), with print and copy-as-text." }
+  ]
+}

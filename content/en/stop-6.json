@@ -1,0 +1,12 @@
+{
+  "id": "stop-6",
+  "number": "06",
+  "word": "Why Japan",
+  "gloss": "The ethic was already here",
+  "stub": true,
+  "lede": "The word was imported. The ethic was already here. That is why the idea moved faster in Japan than anywhere else, and why Japan is now positioned to send it back out.",
+  "lede_draft": true,
+  "blocks": [
+    { "type": "stub", "text": "Second pass. Planned blocks: where the word came from (p.24); why it landed (pp.2-3, 31, 80); the return trip, ending on Noda (pp.105, 111); the two-lane timeline 2016-2024 (p.7)." }
+  ]
+}

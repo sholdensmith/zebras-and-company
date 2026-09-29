@@ -1,0 +1,131 @@
+{
+  "id": "stop-1",
+  "number": "01",
+  "word": "It worked",
+  "gloss": "A three-person company changed national policy",
+  "lede": "Three people and 88.5 million yen put \"zebra companies\" into Japan's national strategy in twenty-seven months, and the state then funded twenty regions to try it.",
+  "lede_draft": true,
+  "blocks": [
+    {
+      "type": "stats",
+      "exception": true,
+      "src": "p.6",
+      "items": [
+        {
+          "num": "3",
+          "gloss": "co-founders: Yohei Azakami, Yoshi Tabuchi, Yuji Suyama"
+        },
+        {
+          "num": "88.5",
+          "unit": "million yen",
+          "gloss": "capital at founding"
+        },
+        {
+          "num": "2021.03.12",
+          "gloss": "Zebras and Company Inc. established, Tokyo"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "draft": true,
+      "src": "p.1, p.21, p.27",
+      "paragraphs": [
+        "The three came from the three worlds they wanted to change: Tabuchi from impact investing, Suyama from the Ministry of Economy, Trade and Industry and then venture capital, Azakami from marketing and creative direction. The report's own explanation for what happened next is that \"the three founders came from their respective target industries. Acting as translators, they listened empathetically to each sector, and communicated their ideas and activities through dialogue.\""
+      ]
+    },
+    {
+      "type": "prose",
+      "draft": true,
+      "src": "pp.54-55",
+      "heading": "What happened next",
+      "paragraphs": [
+        "In June 2023, zebra companies were written into the Japanese government's {{term:basic-policies}} and its Grand Design and Implementation Plan for New Capitalism. The text reads: \"Additionally, efforts will be made to create and promote small and medium-sized enterprises that serve as drivers for solving social challenges in the rural region and attract impact investments (zebra).\"",
+        "It did not happen overnight. In 2022 the Small and Medium Enterprise Agency introduced the concept in its White Paper on Small and Medium Enterprises. Z&C presented at a Liberal Democratic Party meeting, where policymakers said the idea \"should be positioned as a national strategy.\" Z&C then joined the Agency's study group on ecosystems for solving regional social issues, which produced the Basic Policy for Promoting Business to Solve Local Challenges, and from that policy, a pilot."
+      ]
+    },
+    {
+      "type": "stats",
+      "exception": true,
+      "src": "p.55",
+      "items": [
+        {
+          "num": "600",
+          "unit": "million yen",
+          "gloss": "total budget of the Regional Pilot Project"
+        },
+        {
+          "num": "20",
+          "gloss": "regions selected"
+        },
+        {
+          "num": "25",
+          "unit": "million yen",
+          "gloss": "maximum per company, plus support setting impact metrics and strategy"
+        },
+        {
+          "num": "110+",
+          "gloss": "applications submitted"
+        }
+      ]
+    },
+    {
+      "type": "prose",
+      "draft": true,
+      "src": "p.55",
+      "paragraphs": [
+        "Selected companies receive money and something the report treats as equally important: support in setting impact metrics and strategies, redefining vision, and sharing knowledge with the other participants. Two of the selected examples the report names are Nozawa Onsen Kikaku in Nagano and the Iwamiginzan Lifestyle Tourism Research Institute in Shimane. Both appear again later on this page. The report notes that the application process alone \"prompted over 110 teams to discuss how they could contribute to solving local challenges.\""
+      ]
+    },
+    {
+      "type": "eco",
+      "src": "p.55",
+      "heading": "Who holds up a local zebra company",
+      "intro": "The Small and Medium Enterprise Agency's Basic Policy describes the actors around a local zebra company and what flows between them. From the report's diagram on p.55.",
+      "intro_draft": true,
+      "center": "Local zebra companies and projects addressing local challenges",
+      "rings": [
+        {
+          "title": "Human resources support",
+          "actors": [
+            "Borderless Japan",
+            "Venture for Japan",
+            "Community Foundation JAPAN",
+            "Companies interested in regional revitalization, including large corporations such as Japan Post and companies using the Corporate Furusato Nozei system"
+          ],
+          "flow": "Connect with communities"
+        },
+        {
+          "title": "Funding providers",
+          "actors": [
+            "Regional impact funds",
+            "Zebras and Company",
+            "Investors",
+            "Policy-based financial institutions",
+            "Foundations such as SIIF",
+            "Government subsidies"
+          ],
+          "flow": "Contribute to solving local challenges nationwide"
+        },
+        {
+          "title": "Advisors",
+          "actors": [
+            "Borderless Japan",
+            "SIIF",
+            "SIMI",
+            "Zebras and Company"
+          ],
+          "flow": "Share know-how across communities that face similar issues; advance inclusive growth throughout Japan"
+        }
+      ],
+      "footnote": "Some organizations fulfill multiple roles."
+    },
+    {
+      "type": "quote",
+      "src": "p.120",
+      "text": "They told me, \"This can be a real business,\" and even claimed, \"We'll be profitable within three years.\" Pretty confident, huh? ... And to think they actually turned profitable in three years, I mean, what a surprise.",
+      "who": "Hideto Fujino",
+      "role": "President and CIO, Rheos Capital Works; shareholder in Zebras and Company"
+    }
+  ]
+}

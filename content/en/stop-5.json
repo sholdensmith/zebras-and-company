@@ -1,0 +1,41 @@
+{
+  "id": "stop-5",
+  "number": "05",
+  "word": "The objection",
+  "gloss": "The question Z&C cannot yet answer",
+  "theme": "objection",
+  "lede": "The strongest criticism of zebra companies is stated by one of Z&C's own founding shareholders. She says she still cannot fully rebut it.",
+  "lede_draft": true,
+  "blocks": [
+    {
+      "type": "quote",
+      "large": true,
+      "bare": true,
+      "src": "p.59",
+      "text": "Zebra companies don't aim to go public; aren't they just avoiding growth that they could achieve?",
+      "who": "The question SIIF's stakeholders asked in 2021",
+      "role": "As reported by Nanako Kudo"
+    },
+    {
+      "type": "quote",
+      "src": "p.59",
+      "text": "Regarding the question posed three years ago of whether zebra companies are just avoiding growth, I still feel I cannot provide a flawless logical rebuttal.",
+      "who": "Nanako Kudo",
+      "role": "Executive Director, Japan Social Innovation and Investment Foundation (SIIF); shareholder in Zebras and Company"
+    },
+    {
+      "type": "quote",
+      "src": "p.59",
+      "text": "Yet, looking back at the efforts of the companies supported by Zebras and Company, it is clear that this is far from mere avoidance. These companies tackle extraordinary challenges: sustaining business growth while, for example, preserving the prosperity of towns with populations under a few hundred, updating agricultural practices in aging regions, or driving changes in people's mindsets and behaviors. These are not easy tasks.",
+      "who": "Nanako Kudo",
+      "role": "SIIF"
+    },
+    {
+      "type": "quote",
+      "src": "p.59",
+      "text": "On the other hand, zebra-style investors are still few, and I strongly hope that more examples of funding with a \"Different Scale\" approach will emerge.",
+      "who": "Nanako Kudo",
+      "role": "SIIF"
+    }
+  ]
+}

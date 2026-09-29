@@ -1,0 +1,76 @@
+{
+  "_note": "Definitions from the report's Glossary of Zebra Terms, pp.124-125, quoted as printed. Keys are matched against text wrapped in {{term:key}} in other content files.",
+  "src": "pp.124-125",
+  "terms": {
+    "toc": {
+      "label": "Theory of Change (TOC)",
+      "def": "A model that clarifies the pathway to achieving social change. It provides a framework that logically connects activities to their intended outcomes. It helps set goals at each stage and supports strategic decision-making and progress evaluation."
+    },
+    "logic-model": {
+      "label": "Logic Model",
+      "def": "A framework that consistently illustrates the relationship between activities and their outcomes. It clarifies the causal links between actions and expected results to support effective planning and evaluation of projects."
+    },
+    "imm": {
+      "label": "IMM (Impact Measurement and Management)",
+      "def": "The process of measuring and managing social impact. It is used as a framework to evaluate the effectiveness of impact investments, identify areas for improvement through data collection, and enhance social outcomes."
+    },
+    "e2c": {
+      "label": "Exit to Community (E2C)",
+      "def": "A concept proposed by Nathan Schneider, a member of Zebras Unite. It refers to a model in which a company's ownership transitions from existing shareholders to a broader community such as local residents or employees."
+    },
+    "zebras-unite": {
+      "label": "Zebras Unite",
+      "def": "A global community leading the movement of \"zebra companies,\" which aim to balance profit and social contribution. It fosters collaboration among zebra companies, building networks and sharing knowledge to promote sustainable business practices."
+    },
+    "impact-investment": {
+      "label": "Impact Investment",
+      "def": "An investment approach that seeks both financial returns and social or environmental benefits. It provides capital to companies and projects that address issues in areas like education, healthcare, and the environment."
+    },
+    "regional-impact-investment": {
+      "label": "Regional Impact Investment",
+      "def": "An investment method focused on addressing social challenges within a specific region. It utilizes local resources to support the revitalization of regional economies and sustainable development."
+    },
+    "place-based": {
+      "label": "Place-Based Investment",
+      "def": "An investment approach rooted in a specific region, designed to contribute to local economic and social problem-solving. By channeling resources into local initiatives, it promotes sustainable growth and improves community well-being."
+    },
+    "basic-policies": {
+      "label": "Basic Policies (Basic Policies for Economic and Fiscal Management and Reform)",
+      "def": "A government policy document outlining Japan's core economic and fiscal strategies. It specifies concrete implementation measures toward goals such as economic growth and fiscal soundness, is updated annually, and serves as a key guideline for major policy decisions."
+    },
+    "system-change": {
+      "label": "System Change",
+      "def": "A concept focused on transforming the underlying structures of society to enable sustainable change. It involves collaboration among multiple organizations to address root causes and support long-term societal development."
+    },
+    "regenerative": {
+      "label": "Regenerative",
+      "def": "A concept focused on restoring and renewing natural and social systems. Originally used in the context of regenerative agriculture, it has expanded to businesses and cities, representing a shift from mere sustainability to actively creating better, more resilient conditions."
+    },
+    "blended-finance": {
+      "label": "Blended Finance",
+      "def": "A financing method that combines public and private capital to amplify social impact. It diversifies risk while maintaining potential returns and plays a key role in supporting sustainable and large-scale social transformation."
+    },
+    "cooperative-stock": {
+      "label": "Cooperative-Style Stock Company",
+      "def": "A corporate form that integrates the advantages of cooperatives, allowing members to actively participate in management. Profits and decision-making are shared among members, providing a foundation for fair and sustainable economic activity."
+    },
+    "governance": {
+      "label": "Governance",
+      "def": "A framework for decision-making and oversight within organizations. By ensuring transparency, fairness, and accountability, governance strengthens trust and supports long-term business growth."
+    },
+    "impact-report": {
+      "label": "Impact Report",
+      "def": "A report that clearly shows how an organization has created social and environmental impact. It details the outcomes and progress of activities, fulfilling accountability to stakeholders and enhancing transparency."
+    },
+    "typology": {
+      "label": "Parent, sibling and foal zebras",
+      "def": "Z&C's three categories of zebra company in Japan, from p.30: parent zebras, which practice zebra-style management while supporting others; sibling zebras, unlisted companies that play an important role in their region or industry; and foal zebras, companies just starting out.",
+      "src": "p.30"
+    },
+    "sampo-yoshi": {
+      "label": "Sampo-yoshi",
+      "def": "The Omi merchants' principle of good for the seller, the buyer, and society, named in the report by Mara Zepeda (p.2) and Tomoyoshi Noda (p.111).",
+      "src": "p.2, p.111"
+    }
+  }
+}
