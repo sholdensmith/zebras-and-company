@@ -49,8 +49,21 @@
       "src": "p.34",
       "heading": "Ten founders, one question",
       "question": "What does \"balancing social impact and economic viability\" mean to you?",
-      "intro": "The report asked its portfolio companies and advisory clients. Ten answered. They do not agree, and that is the point.",
+      "intro": "The report asked its portfolio companies and advisory clients. Ten answered. They do not agree, and that is the point. Ask them in any order.",
       "intro_draft": true,
+      "ui_draft": true,
+      "ui": {
+        "prompt": "Choose someone to ask.",
+        "count_some": "Asked {n} of {total}.",
+        "count_all": "You have asked all {total}. One more.",
+        "you_name": "You",
+        "you_org": "Your answer, kept on this device",
+        "you_prompt": "Same question. What does balancing social impact and economic viability mean to you?",
+        "you_placeholder": "",
+        "you_submit": "Set it down",
+        "you_fine": "Stays in your browser. Nothing is sent anywhere.",
+        "you_reset": "Start again"
+      },
       "items": [
         { "name": "Toshiko Fujimoto", "org": "Business with Attitude by FIGARO", "text": "A state where each person can work in their own way while having fun, enriching the people around them and society as a whole, and at the same time ensuring that they live in their own authentic way, from food, clothing, and housing, to daily life." },
         { "name": "Yuya Nishimura", "org": "Essence, Inc.", "text": "When you consider the fundamental purpose of a business, it is to create or renew a certain state of society. The economy can be a driving force to make that change a going concern. Social value comes first, and economic viability exists as an option to achieve it." },

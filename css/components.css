@@ -122,6 +122,14 @@
   text-transform: uppercase;
   color: var(--text-muted);
 }
+.nav-card__current {
+  white-space: nowrap;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: var(--track-display);
+  text-transform: uppercase;
+}
 .nav-card__toggle {
   display: none;
   background: none;
@@ -178,6 +186,24 @@
 }
 .nav-card .pill { width: 100%; margin-top: var(--space-4); }
 
+/* Past the hero the card folds to its head; it opens on hover, focus, or tap */
+@media (min-width: 901px) {
+  .nav-card.is-compact:not(.is-open):not(:hover):not(:focus-within) {
+    width: auto;
+    min-width: 200px;
+    padding-bottom: var(--space-4);
+  }
+  .nav-card.is-compact:not(.is-open):not(:hover):not(:focus-within) .nav-card__list,
+  .nav-card.is-compact:not(.is-open):not(:hover):not(:focus-within) .pill { display: none; }
+  .nav-card.is-compact .nav-card__title { display: none; }
+  .nav-card.is-compact .nav-card__current { display: block; }
+  .nav-card.is-compact .nav-card__toggle { display: inline-block; }
+  .nav-card.is-compact:hover .nav-card__current,
+  .nav-card.is-compact:focus-within .nav-card__current { display: none; }
+  .nav-card.is-compact:hover .nav-card__title,
+  .nav-card.is-compact:focus-within .nav-card__title { display: inline; }
+}
+
 @media (max-width: 900px) {
   .logo { display: none; }
   .nav-card {
@@ -190,13 +216,6 @@
   }
   .nav-card__toggle { display: inline-block; }
   .nav-card__title { display: none; }
-  .nav-card__current {
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: var(--track-display);
-    text-transform: uppercase;
-  }
   .nav-card:not(.is-open) .nav-card__list,
   .nav-card:not(.is-open) .pill { display: none; }
 }
@@ -377,7 +396,7 @@
 .term-def[hidden] { display: none; }
 .term-def strong { display: block; font-family: var(--font-display); font-weight: 600; letter-spacing: var(--track-label); text-transform: uppercase; font-size: 12px; margin-bottom: var(--space-1); }
 
-/* ---------- Founders sequence ---------- */
+/* ---------- Founders: the visitor asks ---------- */
 .founders { position: relative; }
 .founders__q {
   font-family: var(--font-serif);
@@ -387,34 +406,121 @@
   max-width: 24ch;
   margin: var(--space-4) 0 var(--space-5);
 }
+
+/* The people: a row of names to ask */
+.founders__people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--space-6);
+  border-top: 1px solid var(--zc-grey-100);
+  border-bottom: 1px solid var(--zc-grey-100);
+  padding: var(--space-3) 0;
+  margin-bottom: var(--space-6);
+}
+.founders__person {
+  background: none; border: 0; padding: var(--space-3) 0; margin: 0;
+  text-align: left; cursor: pointer; color: var(--zc-black);
+  display: grid; gap: 2px;
+  transition: opacity var(--dur-fast) var(--ease-out);
+}
+.founders__person:hover { opacity: .6; }
+.founders__name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: var(--track-display);
+  text-transform: uppercase;
+  line-height: 1.3;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 1px;
+}
+.founders__org {
+  font-family: var(--font-serif);
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text-muted);
+}
+.founders__person.is-asked { color: var(--text-muted); }
+.founders__person.is-asked .founders__org { color: var(--zc-grey-400); }
+.founders__person.is-current { color: var(--zc-black); }
+.founders__person.is-current .founders__name { border-bottom-color: var(--zc-black); }
+.founders__person--you .founders__name { color: var(--accent-link); }
+.founders__person--you.is-current .founders__name { color: var(--zc-black); }
+
+/* The stage */
 .founders__stage {
   background: var(--surface-panel);
   border-radius: var(--radius-panel);
   padding: clamp(var(--space-6), 4vw, var(--space-8));
-  min-height: 320px;
+  min-height: 300px;
   display: grid;
   align-content: center;
 }
+.founders__prompt {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 0;
+}
+.founders__prompt[hidden] { display: none; }
 .founders__card { display: none; }
-.founders__card.is-current { display: block; }
-.no-js .founders__card { display: block; margin-bottom: var(--space-6); }
+.founders__card.is-current {
+  display: block;
+  animation: founders-in var(--dur-base) var(--ease-out);
+}
+@keyframes founders-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .founders__card.is-current { animation: none; } }
 .founders__card p { font-size: clamp(17px, 1.5vw, 21px); line-height: 1.7; }
 .founders__who { margin-top: var(--space-5); }
 .founders__who strong { display: block; font-family: var(--font-display); text-transform: uppercase; letter-spacing: var(--track-label); font-size: 13px; font-weight: 600; }
 .founders__who span { font-size: 14px; color: var(--text-muted); }
-.founders__controls {
-  display: flex; align-items: center; gap: var(--space-4);
-  margin-top: var(--space-5);
+.founders__count {
+  margin: var(--space-4) 0 0;
+  font-family: var(--font-display);
+  font-size: 12px;
+  letter-spacing: var(--track-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+  min-height: 1.5em;
 }
-.founders__dots { display: flex; gap: 6px; margin-left: auto; }
-.founders__dots i {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--zc-grey-400);
-  transition: background var(--dur-fast) var(--ease-out);
+
+/* Your turn */
+.founders__form { display: grid; gap: var(--space-4); }
+.founders__label { font-size: clamp(17px, 1.5vw, 21px); line-height: 1.6; font-weight: 700; }
+.founders__form textarea {
+  width: 100%;
+  min-height: 140px;
+  border: 0;
+  border-radius: var(--radius-block);
+  background: var(--zc-white);
+  padding: var(--space-4) var(--space-5);
+  font: inherit;
+  line-height: 1.7;
+  color: var(--text-body);
+  resize: vertical;
 }
-.founders__dots i.is-current { background: var(--zc-black); }
-.founders__count { font-family: var(--font-display); font-size: 13px; letter-spacing: var(--track-label); color: var(--text-muted); }
-.no-js .founders__controls { display: none; }
+.founders__form textarea:focus-visible { outline: 2px solid var(--zc-black); outline-offset: 0; }
+.founders__formrow { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-4); }
+.founders__fine { font-size: 13px; color: var(--text-muted); }
+.founders__yours[hidden] { display: none; }
+.founders__yours p { font-size: clamp(17px, 1.5vw, 21px); line-height: 1.7; white-space: pre-wrap; }
+.founders__reset {
+  background: none; border: 0; padding: 0; margin-top: var(--space-4);
+  font-family: var(--font-display); font-size: 12px; letter-spacing: var(--track-label); text-transform: uppercase;
+  color: var(--text-muted); cursor: pointer;
+}
+.founders__reset:hover { color: var(--zc-black); }
+
+/* No JS: the ten answers stack, the asking disappears */
+.no-js .founders__people, .no-js .founders__prompt, .no-js .founders__count, .no-js .founders__card--you { display: none; }
+.no-js .founders__card { display: block; margin-bottom: var(--space-6); }
 
 /* ---------- Ecosystem diagram (Stop 1) ---------- */
 .eco {

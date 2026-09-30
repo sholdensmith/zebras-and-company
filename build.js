@@ -98,27 +98,55 @@ const R = {
 
   founders(b, stop) {
     note(stop, b.heading, b.src);
+    const u = b.ui;
     return `<div class="block reveal">
       <h3>${esc(b.heading)}</h3>
       <p class="founders__q">${esc(b.question)}</p>
       ${b.intro ? `<p class="measure${draftCls(b.intro_draft)}">${text(b.intro)}</p>` : ''}
-      <div class="founders" data-founders>
-        <div class="founders__stage" aria-live="polite">
+      <div class="founders" data-founders data-total="${b.items.length}">
+        <div class="founders__people" role="group" aria-label="Who to ask">
           ${b.items
             .map(
-              (f, i) => `<article class="founders__card${i === 0 ? ' is-current' : ''}" data-index="${i}">
+              (f, i) => `<button class="founders__person" type="button" data-ask="${i}" aria-pressed="false">
+                <span class="founders__name">${esc(f.name)}</span>
+                <span class="founders__org">${esc(f.org)}</span>
+              </button>`
+            )
+            .join('')}
+          <button class="founders__person founders__person--you" type="button" data-ask="you" aria-pressed="false" hidden>
+            <span class="founders__name">${esc(u.you_name)}</span>
+            <span class="founders__org">${esc(u.you_org)}</span>
+          </button>
+        </div>
+        <div class="founders__stage">
+          <p class="founders__prompt${draftCls(b.ui_draft)}" data-prompt>${esc(u.prompt)}</p>
+          <div class="founders__cards" aria-live="polite">
+          ${b.items
+            .map(
+              (f, i) => `<article class="founders__card" data-index="${i}">
               <p>${text(f.text)}</p>
               <div class="founders__who"><strong>${esc(f.name)}</strong><span>${esc(f.org)}</span></div>
             </article>`
             )
             .join('')}
+          <article class="founders__card founders__card--you" data-index="you">
+            <form class="founders__form" data-you-form>
+              <label class="founders__label${draftCls(b.ui_draft)}" for="founders-you">${esc(u.you_prompt)}</label>
+              <textarea id="founders-you" rows="4" required placeholder="${esc(u.you_placeholder)}"></textarea>
+              <div class="founders__formrow">
+                <button class="pill pill--sm" type="submit">${esc(u.you_submit)}<span class="arrow"></span></button>
+                <span class="founders__fine">${esc(u.you_fine)}</span>
+              </div>
+            </form>
+            <div class="founders__yours" data-you-answer hidden>
+              <p data-you-text></p>
+              <div class="founders__who"><strong>${esc(u.you_name)}</strong><span>${esc(u.you_org)}</span></div>
+              <button class="founders__reset" type="button" data-you-reset>${esc(u.you_reset)}</button>
+            </div>
+          </article>
+          </div>
         </div>
-        <div class="founders__controls">
-          <button class="arrow-btn arrow-btn--prev" type="button" data-prev aria-label="Previous answer"><span class="arrow"></span></button>
-          <button class="arrow-btn" type="button" data-next aria-label="Next answer"><span class="arrow"></span></button>
-          <span class="founders__count" data-count>1 / ${b.items.length}</span>
-          <div class="founders__dots" data-dots>${b.items.map((_, i) => `<i${i === 0 ? ' class="is-current"' : ''}></i>`).join('')}</div>
-        </div>
+        <p class="founders__count" data-count data-some="${esc(u.count_some)}" data-all="${esc(u.count_all)}" aria-live="polite"></p>
       </div>
     </div>`;
   },

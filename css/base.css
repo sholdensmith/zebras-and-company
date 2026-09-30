@@ -22,6 +22,7 @@ body {
 }
 
 img, svg { display: block; max-width: 100%; }
+[hidden] { display: none !important; }
 
 a {
   color: var(--accent-link);

@@ -15,6 +15,13 @@
       toggle.setAttribute('aria-expanded', String(open));
       toggle.textContent = open ? 'Close' : 'Menu';
     });
+    nav.addEventListener('mouseleave', function () {
+      if (nav.classList.contains('is-compact')) {
+        nav.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.textContent = 'Menu';
+      }
+    });
     links.forEach(function (a) {
       a.addEventListener('click', function () {
         nav.classList.remove('is-open');
@@ -23,6 +30,15 @@
       });
     });
   }
+
+  /* Fold the card once the hero has scrolled past */
+  var hero = document.querySelector('.hero');
+  function compact() {
+    if (!nav || !hero) return;
+    nav.classList.toggle('is-compact', window.scrollY > hero.offsetHeight - 120);
+  }
+  window.addEventListener('scroll', compact, { passive: true });
+  compact();
 
   /* Scroll spy: the stop whose top is nearest above the middle of the viewport */
   function setActive(id) {

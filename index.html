@@ -153,10 +153,49 @@
 <div class="block reveal">
       <h3>Ten founders, one question</h3>
       <p class="founders__q">What does &quot;balancing social impact and economic viability&quot; mean to you?</p>
-      <p class="measure draft">The report asked its portfolio companies and advisory clients. Ten answered. They do not agree, and that is the point.</p>
-      <div class="founders" data-founders>
-        <div class="founders__stage" aria-live="polite">
-          <article class="founders__card is-current" data-index="0">
+      <p class="measure draft">The report asked its portfolio companies and advisory clients. Ten answered. They do not agree, and that is the point. Ask them in any order.</p>
+      <div class="founders" data-founders data-total="10">
+        <div class="founders__people" role="group" aria-label="Who to ask">
+          <button class="founders__person" type="button" data-ask="0" aria-pressed="false">
+                <span class="founders__name">Toshiko Fujimoto</span>
+                <span class="founders__org">Business with Attitude by FIGARO</span>
+              </button><button class="founders__person" type="button" data-ask="1" aria-pressed="false">
+                <span class="founders__name">Yuya Nishimura</span>
+                <span class="founders__org">Essence, Inc.</span>
+              </button><button class="founders__person" type="button" data-ask="2" aria-pressed="false">
+                <span class="founders__name">Tadashi Matsuba</span>
+                <span class="founders__org">Iwamiginzan Gungendo Group</span>
+              </button><button class="founders__person" type="button" data-ask="3" aria-pressed="false">
+                <span class="founders__name">Miai Kobayashi</span>
+                <span class="founders__org">Hitobito, Inc.</span>
+              </button><button class="founders__person" type="button" data-ask="4" aria-pressed="false">
+                <span class="founders__name">Hidenori Kuroyanagi</span>
+                <span class="founders__org">Linklusion, Ltd.</span>
+              </button><button class="founders__person" type="button" data-ask="5" aria-pressed="false">
+                <span class="founders__name">Tatsunari Takano</span>
+                <span class="founders__org">Eiji Press Inc.</span>
+              </button><button class="founders__person" type="button" data-ask="6" aria-pressed="false">
+                <span class="founders__name">Takaya Taguchi</span>
+                <span class="founders__org">Helical Fusion</span>
+              </button><button class="founders__person" type="button" data-ask="7" aria-pressed="false">
+                <span class="founders__name">Yasuhiro Tamura</span>
+                <span class="founders__org">Black Star Label</span>
+              </button><button class="founders__person" type="button" data-ask="8" aria-pressed="false">
+                <span class="founders__name">Daisuke Saigusa</span>
+                <span class="founders__org">Shiojiri City Promotion Public Corporation / sunaba</span>
+              </button><button class="founders__person" type="button" data-ask="9" aria-pressed="false">
+                <span class="founders__name">Ryo Ishida</span>
+                <span class="founders__org">NEWLOCAL Inc.</span>
+              </button>
+          <button class="founders__person founders__person--you" type="button" data-ask="you" aria-pressed="false" hidden>
+            <span class="founders__name">You</span>
+            <span class="founders__org">Your answer, kept on this device</span>
+          </button>
+        </div>
+        <div class="founders__stage">
+          <p class="founders__prompt draft" data-prompt>Choose someone to ask.</p>
+          <div class="founders__cards" aria-live="polite">
+          <article class="founders__card" data-index="0">
               <p>A state where each person can work in their own way while having fun, enriching the people around them and society as a whole, and at the same time ensuring that they live in their own authentic way, from food, clothing, and housing, to daily life.</p>
               <div class="founders__who"><strong>Toshiko Fujimoto</strong><span>Business with Attitude by FIGARO</span></div>
             </article><article class="founders__card" data-index="1">
@@ -187,13 +226,24 @@
               <p>It means ensuring that we are creating hope for all stakeholders through business growth. It is making decisions after considering the impact on a wider system beyond just the business. It is being in a state where our corporate activities are supported by a wide range of stakeholders beyond just our direct customers.</p>
               <div class="founders__who"><strong>Ryo Ishida</strong><span>NEWLOCAL Inc.</span></div>
             </article>
+          <article class="founders__card founders__card--you" data-index="you">
+            <form class="founders__form" data-you-form>
+              <label class="founders__label draft" for="founders-you">Same question. What does balancing social impact and economic viability mean to you?</label>
+              <textarea id="founders-you" rows="4" required placeholder=""></textarea>
+              <div class="founders__formrow">
+                <button class="pill pill--sm" type="submit">Set it down<span class="arrow"></span></button>
+                <span class="founders__fine">Stays in your browser. Nothing is sent anywhere.</span>
+              </div>
+            </form>
+            <div class="founders__yours" data-you-answer hidden>
+              <p data-you-text></p>
+              <div class="founders__who"><strong>You</strong><span>Your answer, kept on this device</span></div>
+              <button class="founders__reset" type="button" data-you-reset>Start again</button>
+            </div>
+          </article>
+          </div>
         </div>
-        <div class="founders__controls">
-          <button class="arrow-btn arrow-btn--prev" type="button" data-prev aria-label="Previous answer"><span class="arrow"></span></button>
-          <button class="arrow-btn" type="button" data-next aria-label="Next answer"><span class="arrow"></span></button>
-          <span class="founders__count" data-count>1 / 10</span>
-          <div class="founders__dots" data-dots><i class="is-current"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
-        </div>
+        <p class="founders__count" data-count data-some="Asked {n} of {total}." data-all="You have asked all {total}. One more." aria-live="polite"></p>
       </div>
     </div>
 <div class="block reveal">
