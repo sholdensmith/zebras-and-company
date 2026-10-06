@@ -3,16 +3,24 @@
   "lang": "en",
   "title": "Different Scale, Different Future",
   "meta_description": "The Zebras and Company Impact Journey Report 2021-2023, told in seven stops for people who would rather not read 67 pages tonight.",
-  "logo": { "text": "Zebras and Company", "href": "https://www.zebrasand.co.jp/" },
+  "logo": {
+    "text": "Zebras and Company",
+    "href": "https://www.zebrasand.co.jp/"
+  },
   "report_pdf": "assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf",
   "hero": {
     "eyebrow": "Impact Journey Report 2021-2023",
     "title": "Different Scale, Different Future",
     "title_src": "p.15, p.59, p.114",
-    "sub": "The report is 67 pages. This is the argument, in seven stops, with the report itself one click away at every one of them.",
-    "sub_draft": true,
-    "primary": { "label": "Start the journey", "href": "#stop-1" },
-    "secondary": { "label": "Download the report", "href": "assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf" }
+    "sub": "What happened when three people set out to prove that a company can grow without growing at any cost. The Impact Journey Report 2021-2023, in seven stops.",
+    "primary": {
+      "label": "Start the journey",
+      "href": "#stop-1"
+    },
+    "secondary": {
+      "label": "Download the report",
+      "href": "assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf"
+    }
   },
   "statement": {
     "draft": true,
@@ -25,41 +33,111 @@
   "nav_title": "The argument",
   "download_label": "Download the report",
   "stops": [
-    { "id": "stop-1", "word": "It worked", "gloss": "A three-person company changed national policy" },
-    { "id": "stop-2", "word": "What a zebra is", "gloss": "The definition Z&C refuses to fix" },
-    { "id": "stop-3", "word": "How it is financed", "gloss": "Money has a color" },
-    { "id": "stop-4", "word": "Three cases", "gloss": "Persimmons, a coup, one golden share" },
-    { "id": "stop-5", "word": "The objection", "gloss": "The question Z&C cannot yet answer" },
-    { "id": "stop-6", "word": "Why Japan", "gloss": "The ethic was already here" },
-    { "id": "stop-7", "word": "Your map", "gloss": "Draw your own theory of change" }
+    {
+      "id": "stop-1",
+      "word": "It worked",
+      "gloss": "A three-person company changed national policy"
+    },
+    {
+      "id": "stop-2",
+      "word": "What a zebra is",
+      "gloss": "The definition Z&C refuses to fix"
+    },
+    {
+      "id": "stop-3",
+      "word": "How it is financed",
+      "gloss": "Money has a color"
+    },
+    {
+      "id": "stop-4",
+      "word": "Three cases",
+      "gloss": "Persimmons, a coup, one golden share"
+    },
+    {
+      "id": "stop-5",
+      "word": "The objection",
+      "gloss": "The question Z&C cannot yet answer"
+    },
+    {
+      "id": "stop-6",
+      "word": "Why Japan",
+      "gloss": "The ethic was already here"
+    },
+    {
+      "id": "stop-7",
+      "word": "Your map",
+      "gloss": "Draw your own theory of change"
+    }
   ],
   "closing": {
     "title": "Read the whole letter",
     "title_draft": true,
     "body": "Please turn these pages with your own questions in mind. The continuation of this journey surely includes you.",
     "body_src": "p.10",
-    "primary": { "label": "Download the report", "href": "assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf" },
+    "primary": {
+      "label": "Download the report",
+      "href": "assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf"
+    },
     "links": [
-      { "label": "LIFE type1 term sheet", "href": "https://forms.gle/2HHzPZTQGxc9rA54A", "src": "p.45" },
-      { "label": "LIFE type1, the full article", "href": "https://www.zebrasand.co.jp/2345", "src": "p.45" },
-      { "label": "Finance for Purpose", "href": "https://www.zebrasand.co.jp/536", "src": "p.50" }
+      {
+        "label": "LIFE type1 term sheet",
+        "href": "https://forms.gle/2HHzPZTQGxc9rA54A",
+        "src": "p.45"
+      },
+      {
+        "label": "LIFE type1, the full article",
+        "href": "https://www.zebrasand.co.jp/2345",
+        "src": "p.45"
+      },
+      {
+        "label": "Finance for Purpose",
+        "href": "https://www.zebrasand.co.jp/536",
+        "src": "p.50"
+      }
     ]
   },
   "footer": {
     "columns": [
-      { "title": "Zebras and Company", "items": [
-        { "label": "zebrasand.co.jp", "href": "https://www.zebrasand.co.jp/" },
-        { "label": "Zebras and Company Inc., established March 12, 2021, Tokyo", "src": "p.6" }
-      ]},
-      { "title": "The report", "items": [
-        { "label": "Written by Yohei Azakami, Yoshi Tabuchi, Sai Sakamoto, Sonoko Tanaka and the Z&C team", "src": "p.123" },
-        { "label": "Editorial design by Hirayama-san", "src": "p.127" },
-        { "label": "Web experience by Smith & Connors" }
-      ]},
-      { "title": "Language", "items": [
-        { "label": "English" },
-        { "label": "日本語 (to come)" }
-      ]}
+      {
+        "title": "Zebras and Company",
+        "items": [
+          {
+            "label": "zebrasand.co.jp",
+            "href": "https://www.zebrasand.co.jp/"
+          },
+          {
+            "label": "Zebras and Company Inc., established March 12, 2021, Tokyo",
+            "src": "p.6"
+          }
+        ]
+      },
+      {
+        "title": "The report",
+        "items": [
+          {
+            "label": "Written by Yohei Azakami, Yoshi Tabuchi, Sai Sakamoto, Sonoko Tanaka and the Z&C team",
+            "src": "p.123"
+          },
+          {
+            "label": "Editorial design by Hirayama-san",
+            "src": "p.127"
+          },
+          {
+            "label": "Web experience by Smith & Connors"
+          }
+        ]
+      },
+      {
+        "title": "Language",
+        "items": [
+          {
+            "label": "English"
+          },
+          {
+            "label": "日本語 (to come)"
+          }
+        ]
+      }
     ],
     "fine_print": "All quotations, figures and names on this page are taken from the Zebras and Company Impact Journey Report 2021-2023, English edition. Page references appear in the sources list below."
   }
