@@ -174,6 +174,246 @@ const R = {
     </div>`;
   },
 
+  /* ---------- pass two ---------- */
+
+  /* Two-column contrast table (Stop 3: fund vs. Z&C) */
+  compare(b, stop) {
+    note(stop, b.heading, b.src);
+    return `<div class="block reveal">
+      <h3>${esc(b.heading)}</h3>
+      ${b.intro ? `<p class="measure${draftCls(b.intro_draft)}">${text(b.intro)}</p>` : ''}
+      <table class="compare">
+        <thead><tr><th scope="col"><span class="visually-hidden">Dimension</span></th><th scope="col">${esc(b.left_title)}</th><th scope="col">${esc(b.right_title)}</th></tr></thead>
+        <tbody>${b.rows
+          .map((r) => `<tr><th scope="row">${esc(r.label)}</th><td>${esc(r.left)}</td><td>${esc(r.right)}</td></tr>`)
+          .join('')}</tbody>
+      </table>
+      ${b.after ? `<div class="measure${draftCls(b.after_draft)}">${b.after.map((p) => `<p>${text(p)}</p>`).join('')}</div>` : ''}
+    </div>`;
+  },
+
+  /* LIFE type1 (Stop 3) */
+  life(b, stop) {
+    note(stop, b.heading, b.src);
+    return `<div class="block reveal">
+      <h3>${esc(b.heading)}<span class="gloss">${esc(b.sub)}</span></h3>
+      ${b.intro ? `<p class="measure${draftCls(b.intro_draft)}">${text(b.intro)}</p>` : ''}
+      <ol class="life">${b.how
+        .map((h) => `<li><h4>${esc(h.title)}</h4><p>${text(h.text)}</p></li>`)
+        .join('')}</ol>
+      <div class="life__terms">
+        <p class="eyebrow">${esc(b.conditions_heading)}</p>
+        <ul>${b.conditions.map((c) => `<li>${esc(c)}</li>`).join('')}</ul>
+        <p class="muted life__note${draftCls(b.conditions_note_draft)}">${esc(b.conditions_note)}</p>
+      </div>
+      <p class="measure life__closing">${text(b.closing)}</p>
+      <p class="life__links">${b.links.map((l) => `<a href="${esc(l.href)}">${esc(l.label)}</a>`).join(' &nbsp;·&nbsp; ')}</p>
+    </div>`;
+  },
+
+  /* The two TOCs, as text until the English diagrams arrive (Stop 3) */
+  tocpair(b, stop) {
+    note(stop, b.heading, b.src);
+    const side = (s, key) => `<article class="tocpair__map" data-toc="${key}">
+      <p class="eyebrow">${esc(s.label)}</p>
+      <h4>${esc(s.title)}</h4>
+      <div class="tocpair__center"><span>${esc(s.center)}</span><small>at the center</small></div>
+      <p>${text(s.text)}</p>
+      <p class="muted tocpair__src">${esc(s.src)}</p>
+    </article>`;
+    return `<div class="block reveal">
+      <h3>${esc(b.heading)}</h3>
+      ${b.intro ? `<p class="measure${draftCls(b.intro_draft)}">${text(b.intro)}</p>` : ''}
+      <div class="tocpair" data-tocpair>
+        <div class="tocpair__controls" role="group" aria-label="Which map">
+          <button class="pill pill--sm pill--outline" type="button" data-toc-show="left" aria-pressed="true">${esc(b.ui.left)}</button>
+          <button class="pill pill--sm pill--outline" type="button" data-toc-show="right" aria-pressed="false">${esc(b.ui.right)}</button>
+        </div>
+        <div class="tocpair__maps">${side(b.left, 'left')}${side(b.right, 'right')}</div>
+      </div>
+      ${b.placeholder_note ? `<p class="muted tocpair__note${draftCls(b.placeholder_note_draft)}">${esc(b.placeholder_note)}</p>` : ''}
+    </div>`;
+  },
+
+  /* Due diligence rubric, collapsed by default (Stop 3) */
+  rubric(b, stop) {
+    note(stop, b.heading, b.src);
+    return `<div class="block reveal">
+      <h3>${esc(b.heading)}</h3>
+      ${b.intro ? `<p class="measure${draftCls(b.intro_draft)}">${text(b.intro)}</p>` : ''}
+      <button class="rubric__toggle" type="button" aria-expanded="false" aria-controls="rubric-body" data-rubric-toggle data-open="${esc(b.toggle_open)}" data-close="${esc(b.toggle_close)}">${esc(b.toggle_open)}<span class="arrow"></span></button>
+      <div class="rubric" id="rubric-body" hidden>
+        ${b.groups
+          .map(
+            (g) => `<section class="rubric__group">
+            <h4>${esc(g.title)}</h4>
+            <dl>${g.items.map((i) => `<div><dt>${esc(i.sub)}</dt><dd>${esc(i.q)}</dd></div>`).join('')}</dl>
+          </section>`
+          )
+          .join('')}
+      </div>
+    </div>`;
+  },
+
+  /* Contextual download */
+  cta(b, stop) {
+    note(stop, 'Download pointer', b.src);
+    return `<div class="block reveal cta">
+      <p class="measure${draftCls(b.text_draft)}">${esc(b.text)}</p>
+      <a class="pill pill--outline" href="${esc(frame.report_pdf)}" download>${esc(b.label)}<span class="arrow"></span></a>
+    </div>`;
+  },
+
+  /* A case (Stop 4) */
+  case(b, stop) {
+    const label = `${stop} · ${b.name}`;
+    note(label, 'Account', b.src);
+    note(label, 'Figures', b.stats_src);
+    if (b.after_src) note(label, 'Collaboration and coverage', b.after_src);
+    if (b.steps_src) note(label, 'Scheme', b.steps_src);
+    return `<article class="block reveal case">
+      <header class="case__head">
+        <p class="eyebrow">${esc(b.number)}</p>
+        <h3>${esc(b.name)}<span class="gloss">${esc(b.place)} · ${esc(b.person)}</span></h3>
+        <p class="case__kind">${esc(b.kind)}</p>
+      </header>
+      <div class="case__photo" role="img" aria-label="${esc(b.photo_alt)}"><span>${esc(b.photo_alt)}</span></div>
+      <div class="measure${draftCls(b.paragraphs_draft)}">${b.paragraphs.map((p) => `<p>${text(p)}</p>`).join('')}</div>
+      ${
+        b.stats
+          ? `<div data-exception="stat-block">
+          <p class="eyebrow">${esc(b.stats_heading)}</p>
+          <div class="stats stats--case">${b.stats
+            .map(
+              (i) => `<div class="stat">
+              <div class="stat__num${String(i.num).length > 6 ? ' stat__num--long' : ''}">${esc(i.num)}${i.unit ? `<small>${esc(i.unit)}</small>` : ''}</div>
+              <div class="stat__gloss">${text(i.gloss)}</div>
+            </div>`
+            )
+            .join('')}</div>
+        </div>`
+          : ''
+      }
+      ${
+        b.steps
+          ? `<div class="steps"><p class="eyebrow">${esc(b.steps_heading)}</p><ol>${b.steps
+              .map((s) => `<li>${esc(s)}</li>`)
+              .join('')}</ol></div>`
+          : ''
+      }
+      ${b.after ? `<div class="measure${draftCls(b.after_draft)}">${b.after.map((p) => `<p>${text(p)}</p>`).join('')}</div>` : ''}
+      ${
+        b.quote
+          ? `<blockquote class="quote"><p>${text(b.quote.text)}</p><footer><b>${esc(b.quote.who)}</b>${
+              b.quote.role ? `, ${esc(b.quote.role)}` : ''
+            }</footer></blockquote>`
+          : ''
+      }
+    </article>`;
+  },
+
+  /* Two ledgers (Stop 4) */
+  ledgers(b, stop) {
+    note(stop, b.heading, b.src);
+    const col = (c, key) => `<div class="ledger" data-ledger="${key}">
+      <h4>${esc(c.title)}</h4>
+      <ul>${c.items.map((i) => `<li><span>${text(i.text)}</span><small>${esc(i.src)}</small></li>`).join('')}</ul>
+    </div>`;
+    return `<div class="block reveal">
+      <h3>${esc(b.heading)}</h3>
+      ${b.intro ? `<p class="measure${draftCls(b.intro_draft)}">${text(b.intro)}</p>` : ''}
+      <div class="ledgers" data-ledgers>
+        <div class="ledgers__controls" role="group" aria-label="Which ledger is in focus">
+          <button class="pill pill--sm pill--outline" type="button" data-ledger-focus="left" aria-pressed="true">${esc(b.ui.left)}</button>
+          <button class="pill pill--sm pill--outline" type="button" data-ledger-focus="right" aria-pressed="false">${esc(b.ui.right)}</button>
+        </div>
+        <div class="ledgers__cols">${col(b.left, 'left')}${col(b.right, 'right')}</div>
+      </div>
+    </div>`;
+  },
+
+  /* Credit strip (Stop 4) */
+  credits(b, stop) {
+    note(stop, b.heading, b.src);
+    return `<div class="block reveal">
+      <h3>${esc(b.heading)}</h3>
+      ${b.intro ? `<p class="measure${draftCls(b.intro_draft)}">${text(b.intro)}</p>` : ''}
+      <ul class="credits">${b.items
+        .map((i) => `<li><strong>${esc(i.name)}</strong><span>${text(i.text)}</span><small>${esc(i.src)}</small></li>`)
+        .join('')}</ul>
+    </div>`;
+  },
+
+  /* Two-lane timeline (Stop 6) */
+  timeline(b, stop) {
+    note(stop, b.heading, b.src);
+    return `<div class="block reveal">
+      <h3>${esc(b.heading)}</h3>
+      ${b.intro ? `<p class="measure${draftCls(b.intro_draft)}">${text(b.intro)}</p>` : ''}
+      <div class="timeline" data-timeline>
+        <div class="timeline__lanes" aria-hidden="true">${b.lanes.map((l) => `<span>${esc(l)}</span>`).join('')}</div>
+        <ol class="timeline__track">${b.items
+          .map(
+            (i, n) => `<li class="timeline__point timeline__point--lane${i.lane}">
+            <button type="button" data-tl="${n}" aria-expanded="false" aria-controls="tl-${n}">
+              <span class="timeline__year">${esc(i.year)}</span>
+              <span class="timeline__dot"></span>
+              <span class="timeline__title">${esc(i.title)}</span>
+            </button>
+            <div class="timeline__body" id="tl-${n}" hidden><p>${text(i.text)}</p><small>${esc(i.src)}</small></div>
+          </li>`
+          )
+          .join('')}</ol>
+        <div class="timeline__detail" data-tl-detail aria-live="polite"></div>
+        <p class="timeline__legend">${b.lanes
+          .map((l, i) => `<span><span class="timeline__dot timeline__dot--legend${i ? ' timeline__dot--filled' : ''}" aria-hidden="true"></span>${esc(l)}</span>`)
+          .join('')}</p>
+      </div>
+    </div>`;
+  },
+
+  /* Draw your own map (Stop 7) */
+  yourmap(b, stop) {
+    note(stop, b.heading, b.src);
+    note(stop, 'Logic model stages', b.stages_src);
+    const u = b.ui;
+    return `<div class="block reveal">
+      <h3>${esc(b.heading)}</h3>
+      ${b.intro ? `<p class="measure${draftCls(b.intro_draft)}">${text(b.intro)}</p>` : ''}
+      <div class="yourmap" data-yourmap data-total="${b.questions.length}" data-stages='${esc(JSON.stringify(b.stages_order))}'>
+        <form class="yourmap__form" data-ym-form>
+          <p class="yourmap__progress${draftCls(b.ui_draft)}" data-ym-progress data-tpl="${esc(u.progress)}"></p>
+          ${b.questions
+            .map(
+              (q, i) => `<fieldset class="yourmap__q" data-ym-q="${i}">
+              <legend><span class="eyebrow">${esc(q.stage)} · ${esc(q.sub)}</span><span class="yourmap__question">${esc(q.q)}</span><small class="muted">${esc(q.src)}</small></legend>
+              <textarea id="ym-${i}" name="ym-${i}" rows="5" data-stage="${esc(q.stage)}" data-sub="${esc(q.sub)}" data-q="${esc(q.q)}" placeholder="${esc(u.placeholder)}" aria-label="${esc(q.q)}"></textarea>
+            </fieldset>`
+            )
+            .join('')}
+          <div class="yourmap__nav">
+            <button class="arrow-btn arrow-btn--prev" type="button" data-ym-back aria-label="${esc(u.back)}"><span class="arrow"></span></button>
+            <button class="pill" type="button" data-ym-next>${esc(u.next)}<span class="arrow"></span></button>
+            <button class="pill" type="submit" data-ym-finish hidden>${esc(u.finish)}<span class="arrow"></span></button>
+          </div>
+          <p class="yourmap__fine muted${draftCls(b.ui_draft)}">${esc(u.fine)}</p>
+        </form>
+        <section class="yourmap__map" data-ym-map hidden aria-label="${esc(u.map_title)}">
+          <h4 class="display">${esc(u.map_title)}</h4>
+          <ol class="yourmap__stages" data-ym-stages></ol>
+          <p class="yourmap__caption">${esc(u.map_caption)} <small class="muted">(${esc(u.map_caption_src)})</small></p>
+          <div class="yourmap__actions">
+            <button class="pill pill--outline" type="button" data-ym-edit>${esc(u.edit)}<span class="arrow"></span></button>
+            <button class="pill" type="button" data-ym-print>${esc(u.print)}<span class="arrow"></span></button>
+            <button class="pill pill--outline" type="button" data-ym-copy data-copied="${esc(u.copied)}">${esc(u.copy)}<span class="arrow"></span></button>
+            <button class="yourmap__reset" type="button" data-ym-reset>${esc(u.reset)}</button>
+          </div>
+        </section>
+        <template data-ym-empty>${esc(u.empty)}</template>
+      </div>
+    </div>`;
+  },
+
   stub(b) {
     return `<div class="block stub"><p class="eyebrow">Not built yet</p><p class="measure">${esc(b.text)}</p></div>`;
   },
@@ -312,6 +552,11 @@ ${body.join('\n')}
 <script src="js/gloss.js" defer></script>
 <script src="js/founders.js" defer></script>
 <script src="js/ecosystem.js" defer></script>
+<script src="js/ledgers.js" defer></script>
+<script src="js/timeline.js" defer></script>
+<script src="js/tocpair.js" defer></script>
+<script src="js/rubric.js" defer></script>
+<script src="js/yourmap.js" defer></script>
 </body>
 </html>
 `;

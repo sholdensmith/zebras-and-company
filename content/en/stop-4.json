@@ -3,10 +3,165 @@
   "number": "04",
   "word": "Three cases",
   "gloss": "Persimmons, a coup, one golden share",
-  "stub": true,
   "lede": "Three different kinds of proof with no overlap: a company that grew on metrics a term sheet ignores, a company that survived a coup by changing who owned it, and a company that sold itself while keeping its purpose out of the buyer's hands.",
   "lede_draft": true,
   "blocks": [
-    { "type": "stub", "text": "Second pass. Planned blocks: Hitobito (pp.62-67); Linklusion (pp.76-79); Eiji Press (pp.96-99); credit strip for the other seven accounts; the two ledgers. Waiting on case photography from Z&C." }
+    {
+      "type": "case",
+      "src": "pp.62-67",
+      "number": "Case 1",
+      "name": "Hitobito",
+      "place": "Kunimi Town, Fukushima",
+      "person": "Miai Kobayashi, CEO",
+      "kind": "Portfolio company. Z&C's first equity investment, February 2022.",
+      "photo_alt": "Case photography to come from Z&C",
+      "paragraphs": [
+        "Hitobito delivers non-standard peaches from Fukushima to Tokyo the same day, so they are not thrown away. In 2020 it launched a feminine care brand, \"Ashita watashi wa kaki no ki ni noboru\" (Tomorrow, I will climb a persimmon tree), made from the tannin-rich skins discarded in the production of Anpo-gaki, the region's semi-dried persimmons.",
+        "Before Z&C, the company's refusal to put its own growth above everything else \"conflicted with the conventional world of startup investing and faced widespread criticism. It was labeled an 'excuse' or disparaged with comments like 'women aren't aspirational.'\" Z&C, in Kobayashi's words, \"for the first time, affirmed our approach.\" The investment scheme LIFE type1, described in the previous stop, was designed for this deal."
+      ],
+      "paragraphs_draft": true,
+      "stats_heading": "What Hitobito and Z&C measured, 2021 to 2023",
+      "stats": [
+        { "num": "154%", "gloss": "company-wide sales growth rate, 2021 to 2023; cosmetics business 274%" },
+        { "num": "131%", "gloss": "growth in shipments of non-standard and unutilized produce through the new distribution structure" },
+        { "num": "65,359", "unit": "kg", "gloss": "agricultural waste reduced, total 2021 to 2023" },
+        { "num": "453,148", "unit": "yen", "gloss": "increase in annual net income per producer from transactions with Hitobito" },
+        { "num": "3,980", "gloss": "participants in health literacy programs" },
+        { "num": "98.9%", "gloss": "reported improved health literacy afterward (729 of 737 valid responses)" }
+      ],
+      "stats_src": "p.64",
+      "after": [
+        "Then the large companies came to her. With Paramount Bed, under a METI-adopted project, Hitobito researched menopause and sleep among working women: roughly 70 percent may experience insomnia, and 93 percent of participants in the resulting self-care program reported improvement. With Japan Post and JR East it is testing a \"responsible\" farm-to-table supply chain that moves peaches by bullet train. The report calls the collaborations \"an unexpected outcome\" and \"a perfect example of a zebra company.\""
+      ],
+      "after_draft": true,
+      "after_src": "pp.64-65",
+      "quote": {
+        "text": "Z&C was the first to say 'I like what you're doing.'",
+        "who": "Miai Kobayashi",
+        "role": "from Z&C's interviews with the founder, p.67"
+      }
+    },
+    {
+      "type": "ledgers",
+      "src": "pp.44, 59, 62, 64, 67",
+      "heading": "Two ledgers",
+      "intro": "What a term sheet would have looked at, and what actually moved. The left column is the report describing the conventional view in its own words. The right column is what Hitobito and Z&C tracked. Nothing on either side is written by us.",
+      "intro_draft": true,
+      "ui": { "left": "The term sheet", "right": "What moved" },
+      "left": {
+        "title": "What a conventional investor would have seen",
+        "items": [
+          { "text": "\"traditional venture capital metrics, such as market size and growth speed\"", "src": "Nanako Kudo, p.59" },
+          { "text": "\"rapid growth, early IPOs, or M&A exits\"", "src": "LIFE type1, p.44" },
+          { "text": "a management style \"labeled an 'excuse' or disparaged with comments like 'women aren't aspirational'\"", "src": "Miai Kobayashi, p.62" }
+        ]
+      },
+      "right": {
+        "title": "What Hitobito and Z&C tracked",
+        "items": [
+          { "text": "Company-wide sales: 154% growth rate, 2021 to 2023", "src": "p.64" },
+          { "text": "Producer income: up 453,148 yen per year per producer", "src": "p.64" },
+          { "text": "Employee income: improved across the board, alongside sales, profits and farmer incomes", "src": "p.63, p.67" },
+          { "text": "Agricultural waste diverted: 65,359 kg", "src": "p.64" },
+          { "text": "Health literacy: 3,980 participants, 98.9% reporting improvement", "src": "p.64" }
+        ]
+      }
+    },
+    {
+      "type": "case",
+      "src": "pp.76-79",
+      "number": "Case 2",
+      "name": "Linklusion",
+      "place": "Myanmar",
+      "person": "Hidenori Kuroyanagi, CEO",
+      "kind": "Portfolio company. Finance for Purpose client from February 2021, then investment.",
+      "photo_alt": "Case photography to come from Z&C",
+      "paragraphs": [
+        "Linklusion runs two businesses in Myanmar: B2B commerce that delivers food, daily necessities and medicine to small rural shops over a logistics network \"built up over six years, which utilizes not only land routes but also waterways to reach villages where even mail does not arrive,\" and a cloud system for microfinance institutions that lend to low-income households.",
+        "In February 2021 the military took power. The Series A Linklusion had planned for that year fell through; \"Myanmar was no longer a market where VCs could invest.\" The company had a year of runway. Kuroyanagi went to Z&C's Suyama, who told him: \"This is a business that must be preserved. It can definitely work as an investment from a long-term perspective. The chances of fundraising are high.\" Seven months of Finance for Purpose followed, raising from a mix of angel investment, crowdfunding, loans and grants, and then Z&C invested."
+      ],
+      "paragraphs_draft": true,
+      "stats_heading": "June 2021 to March 2024",
+      "stats": [
+        { "num": "12 → 392", "gloss": "shareholders before Z&C's investment and now, a 32.7-fold increase, mostly individual investors" },
+        { "num": "515", "gloss": "villages served by the commerce business, 2.2 times as many" },
+        { "num": "5.7×", "gloss": "product sales growth" },
+        { "num": "109", "gloss": "employees, 1.3 times as many; 90% in their twenties, 60% women" },
+        { "num": "220", "unit": "million yen", "gloss": "raised across two post-coup funding rounds, approximately, with Z&C's support" }
+      ],
+      "stats_src": "pp.77-79",
+      "after": [
+        "\"Typical startups follow a fairly predetermined growth process and timeline. Zebra companies, however, have diverse equations and solutions. They can chart their own long-term growth curve.\" The report's own summary of what the shareholder count means: \"Amidst Myanmar's challenging circumstances, numerous small-scale investments made business continuity possible. Beyond economic viability, many resonated with our long-term story and vision, turning this into a venture where the aspirations of many individuals converge.\""
+      ],
+      "after_draft": true,
+      "after_src": "pp.77, 79",
+      "quote": {
+        "text": "Social value is the goal, economic value is the necessary condition.",
+        "who": "Hidenori Kuroyanagi",
+        "role": "CEO, Linklusion Ltd., p.77"
+      }
+    },
+    {
+      "type": "case",
+      "src": "pp.96-99",
+      "number": "Case 3",
+      "name": "Eiji Press",
+      "place": "Tokyo",
+      "person": "Tatsunari Takano, CEO",
+      "kind": "Advisory client, November 2022 to the share transfer of February 29, 2024.",
+      "photo_alt": "Case photography to come from Z&C",
+      "paragraphs": [
+        "Eiji Press is a publisher of business and social-issue books with a stated purpose, \"Publishing for Change,\" and a house culture of autonomy and dialogue; it published the Japanese edition of Reinventing Organizations. In 2024 it needed a successor owner and did not want to lose either.",
+        "On February 29, 2024, all of its shares went to KAYAC Inc. except one. That one share, converted into a golden share with veto rights over any change to the company's name or purpose, is held by Eiji Shuppan Wo Tsunagu Kai, a general incorporated association made up solely of Eiji Press employees. The purpose was written into the articles of incorporation as part of the deal. According to a March 2024 study by Z&C, this was \"the first publicly reported case of its kind in Japan.\" Z&C brought case studies of succession from around the world, among them Patagonia's transfer to an environmental nonprofit and {{term:e2c}}; Takano says learning about them \"allowed us to think more flexibly,\" and the golden share came out of that. Z&C's regular question through the process was \"What is most important to Eiji Press?\""
+      ],
+      "paragraphs_draft": true,
+      "stats_heading": "Eiji Press issued shares, excluding treasury stock: 5,801",
+      "stats": [
+        { "num": "1", "gloss": "share, with veto rights, held by the employees' association" },
+        { "num": "5,800", "gloss": "shares, approximately 99 percent, transferred to KAYAC Inc." }
+      ],
+      "stats_src": "p.99",
+      "steps_heading": "The scheme in four steps",
+      "steps": [
+        "Amend Eiji Press Inc.'s articles of incorporation to newly define its purpose.",
+        "Establish the general incorporated association, Eiji Shuppan Wo Tsunagu Kai, owned and governed by employees.",
+        "Existing shareholders, including the founder, transfer one share to the association, convert that share into a golden share with veto rights over changes to the purpose and company name, and transfer the remaining 5,800 shares to KAYAC Inc.",
+        "Conclude a contract among KAYAC Inc., Eiji Press, Inc., and the Eiji Shuppan Wo Tsunagu Kai association."
+      ],
+      "steps_src": "p.99",
+      "after": [
+        "After the agreement was signed, the employees proposed and ran an \"organizational wedding\" with KAYAC, \"where the vows were spoken not just by the two representatives but by everyone.\" The succession was covered by Nikkei, Toyo Keizai Online and Business Insider, more outlets than the company expected."
+      ],
+      "after_draft": true,
+      "after_src": "pp.97, 99",
+      "quote": {
+        "text": "If more companies can choose buyers with their purpose and intended impact in mind, pursuing what is sometimes called a \"responsible exit,\" it would be a positive development for society.",
+        "who": "Tatsunari Takano",
+        "role": "CEO, Eiji Press, Inc., p.97"
+      }
+    },
+    {
+      "type": "credits",
+      "src": "pp.68-101",
+      "heading": "The other seven",
+      "intro": "The report gives each of Z&C's portfolio and advisory accounts the same treatment. One line each here, with the page to turn to.",
+      "intro_draft": true,
+      "items": [
+        { "name": "esse-sense", "text": "Research-knowledge media and grants, run as a {{term:cooperative-stock}} where every shareholder has one vote and \"the company has no specific owner.\"", "src": "p.68" },
+        { "name": "NEWLOCAL", "text": "{{term:place-based}} community building in Nozawa Onsen and Miyota, Nagano, and Oga, Akita; aiming for ten regions in five years.", "src": "p.72" },
+        { "name": "Iwamiginzan Gungendo", "text": "A \"livelihood with roots\" in Omori, Shimane, run on the founder's rule of \"51% culture, 49% economy.\"", "src": "p.80" },
+        { "name": "Black Star Label", "text": "Films that turn indifference toward social issues into interest, beginning with \"Dance with the Issue: Our Dialogue with Electricity.\"", "src": "p.84" },
+        { "name": "madame FIGARO japon, Business with Attitude", "text": "A community of around 70 female entrepreneurs and 2,800 seminar participants, built on the idea of \"startups tailored to their means.\"", "src": "p.88" },
+        { "name": "Sunaba, Shiojiri City", "text": "A civic innovation hub that turned Z&C's support methods into DIVE, a local impact investment program for ten entrepreneurs.", "src": "p.92" },
+        { "name": "Helical Fusion", "text": "A fusion-energy startup pursuing J-curve growth that still found, in Taguchi's words, \"much to learn from the zebra worldview.\"", "src": "p.100" }
+      ]
+    },
+    {
+      "type": "cta",
+      "src": "pp.62-101",
+      "text": "Each company's logic model, the interviews with their stakeholders and Z&C's own account of what it did are in the report, pp.62-101.",
+      "text_draft": true,
+      "label": "Download the report"
+    }
   ]
 }

@@ -3,10 +3,60 @@
   "number": "06",
   "word": "Why Japan",
   "gloss": "The ethic was already here",
-  "stub": true,
   "lede": "The word was imported. The ethic was already here. That is why the idea moved faster in Japan than anywhere else, and why Japan is now positioned to send it back out.",
   "lede_draft": true,
   "blocks": [
-    { "type": "stub", "text": "Second pass. Planned blocks: where the word came from (p.24); why it landed (pp.2-3, 31, 80); the return trip, ending on Noda (pp.105, 111); the two-lane timeline 2016-2024 (p.7)." }
+    {
+      "type": "prose",
+      "draft": true,
+      "src": "p.24, p.26",
+      "heading": "Where the word came from",
+      "paragraphs": [
+        "In 2016 two founders, Jennifer Brandel and Mara Zepeda, published a blog post called \"Sex and Startups.\" It argued that in a venture-funded world \"the only pathway for companies who experience exponential growth was a rapid exit,\" and that companies in between had nowhere to go. Astrid Scholz and Aniyia Williams joined them, and the four launched Zebras Unite. Their March 2017 article \"Zebras Fix What Unicorns Break\" named the alternative. There are now chapters in more than twenty countries.",
+        "In April 2018 Yoshi Tabuchi, then working in impact investing in Southeast Asia and Japan, sat in the \"Zebras Fix What Unicorns Break\" session at the Skoll World Forum in the UK and \"found that it mirrored his own concerns about the industry.\" He had been asking himself whether there was \"a misalignment between the nature of capital that entrepreneurs and organizations need, and the nature of investment capital that is actually being offered.\" Tokyo Zebras Unite opened in November 2019. The translation that let the idea travel was zebra kigyo, zebra company."
+      ]
+    },
+    {
+      "type": "quote",
+      "src": "p.2",
+      "text": "Japan is the first island of sanity to adopt and follow this path, this dao, of the Zebra. This path includes principles from your culture like shibui, ikigai, and mottainai. From what I have learned, the Omi Merchants were also on this path, and their concept of 'Sampo-yoshi' – good for the seller, buyer, and society – was ahead of its time in naming what you love and wish to protect.",
+      "who": "Mara Zepeda",
+      "role": "Co-founder, Zebras Unite. From \"A Love Letter to Japan\""
+    },
+    {
+      "type": "prose",
+      "draft": true,
+      "src": "p.31, p.80, p.105",
+      "heading": "Why it landed",
+      "paragraphs": [
+        "Overseas, zebras were a startup argument. In Japan, the report says, \"when the concept of zebra companies was first introduced in 2019, we immediately saw strong interest from long-established and regional businesses as well.\" Companies that had been running on a long horizon for generations recognized themselves. The parent, sibling and foal typology in Stop 2 came out of that response.",
+        "Gungendo is the living instance. Its founder, Daikichi Matsuba, \"often said that the guiding principle for decision-making is '51% culture, 49% economy.'\" The company had been practicing the ethic for decades before anyone handed it the vocabulary. Z&C's own conclusion, in its new theory of change: \"we are not creating a new type of company, but rather bringing out the potential of people and companies that already exist by shedding light on them from a different angle.\""
+      ]
+    },
+    {
+      "type": "timeline",
+      "src": "pp.6-7, 24, 44, 54-55",
+      "heading": "2016 to 2024",
+      "intro": "Two lanes, as in the report's own timeline spread. Tap a point for one sentence.",
+      "intro_draft": true,
+      "lanes": ["Global", "Japan"],
+      "items": [
+        { "year": "2016", "lane": 0, "title": "\"Sex and Startups\"", "text": "Jennifer Brandel and Mara Zepeda publish the blog post that starts the movement.", "src": "p.24" },
+        { "year": "2017", "lane": 0, "title": "\"Zebras Fix What Unicorns Break\"", "text": "The March 2017 article introduces zebra companies to the world; Zebras Unite forms.", "src": "p.24" },
+        { "year": "2018", "lane": 0, "title": "Skoll World Forum", "text": "Yoshi Tabuchi attends the \"Zebras Fix What Unicorns Break\" session in the UK in April and recognizes his own concerns.", "src": "p.24" },
+        { "year": "2019", "lane": 1, "title": "Tokyo Zebras Unite", "text": "The Japan chapter is established in November 2019. \"Zebras\" becomes zebra kigyo.", "src": "p.24" },
+        { "year": "2021", "lane": 1, "title": "Zebras and Company founded", "text": "March 12, 2021, Tokyo. Three co-founders, 88.5 million yen in capital.", "src": "p.6" },
+        { "year": "2022", "lane": 1, "title": "First investment, LIFE type1", "text": "Z&C invests in Hitobito in February 2022 and releases the LIFE type1 term sheet; ZEBRAHOOD 2022 is held. Zebra companies appear in METI's SME White Paper.", "src": "p.7, p.44" },
+        { "year": "2023", "lane": 1, "title": "National strategy", "text": "In June 2023 zebra companies are written into the Cabinet's Basic Policies for Economic and Fiscal Management and Reform.", "src": "p.54" },
+        { "year": "2024", "lane": 1, "title": "Twenty regions", "text": "The SME Agency's 600-million-yen Regional Pilot Project selects 20 regions from more than 110 applications.", "src": "p.55" }
+      ]
+    },
+    {
+      "type": "quote",
+      "src": "p.111",
+      "text": "Japan has long embraced the spirit of sampo-yoshi (benefiting all three parties: seller, buyer, and society), so it's no surprise that zebra companies resonate here. But you shouldn't stop there. Though the zebra concept originated overseas, I hope you'll take Japan's experiences and philosophy, blend them together, and then re-export them to the world. I look forward to seeing examples of Japanese corporations investing in global zebra companies, or foreign firms supporting Japanese zebras.",
+      "who": "Tomoyoshi Noda",
+      "role": "to Yoshi Tabuchi, May 13, 2024"
+    }
   ]
 }

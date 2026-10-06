@@ -3,10 +3,148 @@
   "number": "03",
   "word": "How it is financed",
   "gloss": "Money has a color",
-  "stub": true,
   "lede": "Z&C built its own capital structure because a fund could not do what it needed, then built instruments so zebra companies could raise money without accepting a timeline that kills the mission.",
   "lede_draft": true,
   "blocks": [
-    { "type": "stub", "text": "Second pass. Planned blocks: Z&C is not a fund (pp.40-41); Money has a color (pp.50-51); LIFE type1 (pp.44-45); TOC x TOC (p.48); the two TOCs (pp.12-13, 104-105); the due diligence rubric (pp.46-47). Waiting on the English TOC diagrams from Z&C." }
+    {
+      "type": "compare",
+      "src": "pp.40-41",
+      "heading": "Z&C is not a fund",
+      "intro": "Because Z&C invests, it is sometimes called a VC fund for zebra companies. It is a joint-stock company that raised capital specifically for investment, with a structure designed, in the report's words, \"to allow for greater flexibility in capital gains and more freedom in exit strategies in the long term.\" The comparison from the report:",
+      "intro_draft": true,
+      "left_title": "Typical investment fund",
+      "right_title": "Z&C model",
+      "rows": [
+        { "label": "Vehicle", "left": "Fund", "right": "Corporation" },
+        { "label": "Investor role", "left": "Investors (limited partners)", "right": "Shareholders" },
+        { "label": "Term", "left": "10 years", "right": "None" },
+        { "label": "How investors are paid", "left": "Distribution of total proceeds at redemption", "right": "Annual dividends when Z&C earns profit, plus share buyback" },
+        { "label": "Operating costs", "left": "Management fees from fund capital", "right": "Fees from management support activities" },
+        { "label": "Commitment to investment", "left": "Exclusive, required", "right": "Limited (focus on overall zebra ecosystem development)" }
+      ],
+      "after": [
+        "Two features carry the structure. The report: \"in designing financial returns, we eliminated the 'time limit' commonly found in funds, thereby enabling a variety of exit strategies,\" and \"we redefined the relationship between shares and voting rights. By limiting voting rights, we removed many of the restrictions typically imposed on fund managers.\" The legal form was built with Mori Hamada & Matsumoto.",
+        "The honest line underneath: at founding, the zebra concept \"was not yet widely recognized, making it difficult to sustain a management fee model that assumed large-scale funding,\" and the typical five-year exit \"was often incompatible with the long-term vision of zebra companies.\" So advisory work pays the bills. It is also where the theory on this page comes from."
+      ],
+      "after_draft": true
+    },
+    {
+      "type": "prose",
+      "draft": true,
+      "src": "pp.50-51",
+      "heading": "Money has a color",
+      "paragraphs": [
+        "There is a saying that money has no color. In investment, the report argues, it does: \"Who provides the money, with what intentions, and what outcomes or timeframes are they expecting? These factors can make the same amount of money carry completely different meanings.\" Venture capitalists, banks, angels and foundations each bring a different color, and \"growth schemes premised on IPOs or M&A, or loan systems requiring collateral and track record, frequently cannot accommodate\" a company that wants to be self-sufficient over decades.",
+        "Z&C offers two services on this premise. Finance for Purpose helps a company design \"how, from whom, and under what conditions they receive funds.\" Zebras Finance Design takes the longer view, shaping financing to fit purpose and governance. Two instances from the report. For the Iwamiginzan Lifestyle and Tourism Research Institute in Shimane, Z&C helped build a theory of change and business plan centered on community rather than tourist numbers, and mapped the stance and role of every funder around it. For Linklusion in Myanmar, Z&C helped clarify the business hypotheses and theory of change, then raise from corporate and angel investors after a coup had closed the usual doors. That story is in the next stop.",
+        "\"In zebra company fundraising, what matters more than the diversity of funding schemes is how to connect with people who resonate with the company's purpose. We act as translators and connectors of values between companies and investors.\""
+      ]
+    },
+    {
+      "type": "life",
+      "src": "pp.44-45",
+      "heading": "LIFE type1",
+      "sub": "A long-term investment structure for future fairness",
+      "intro": "The scheme Z&C designed for its first equity investment, Hitobito, when the existing options did not fit. The report: \"Conventional VC models, which tend to prioritize rapid growth, early IPOs, or M&A exits, are often based on short-term outcomes. As a result, discrepancies can emerge between an entrepreneur's original vision for the business and their own life plans.\" The question Z&C asked itself was \"What kind of investment truly serves the entrepreneur?\"",
+      "intro_draft": true,
+      "how": [
+        { "title": "Agree, then keep talking", "text": "Both parties agree on growth objectives and return expectations at the time of investment, and \"the goals are to be revised through ongoing dialogue.\"" },
+        { "title": "Return value when milestones are met", "text": "\"Once certain milestones are achieved, if both management and shareholders agree, the company may conduct a share buyback to return value to investors.\" The terms also allow a shift to other forms of return as time horizons, market conditions or growth stage change." },
+        { "title": "Accept a changeable future", "text": "\"Rather than fixing the future too rigidly, LIFE type1 is built on an acceptance of a 'changeable future.'\" Aspirations like \"building a company that remains rooted in the community for generations\" or \"creating a business that can be passed on to the next generation\" become viable precisely because the scheme does not assume short-term returns." }
+      ],
+      "conditions_heading": "The buyback conditions, as the report prints them",
+      "conditions": [
+        "Applies only if sales exceed ● yen in revenue (not triggered if the business does not grow)",
+        "If requested by shareholders holding a majority of voting rights other than the management shareholders",
+        "The company may conduct a share buyback, capped at the lower of \"●% of revenue,\" \"●% of cash and deposits,\" or \"●% of retained earnings\""
+      ],
+      "conditions_note": "The report leaves the threshold and percentages blank. So does this page. The mechanism is the point.",
+      "conditions_note_draft": true,
+      "closing": "\"In an era where investors' values and philosophies are increasingly under scrutiny, this is not merely a matter of goodwill or idealism; it is an attempt to demonstrate a sustainable framework for what 'zebra-style investment' can mean.\"",
+      "links": [
+        { "label": "Download the LIFE type1 term sheet", "href": "https://forms.gle/2HHzPZTQGxc9rA54A" },
+        { "label": "The full article", "href": "https://www.zebrasand.co.jp/2345" }
+      ]
+    },
+    {
+      "type": "prose",
+      "draft": true,
+      "src": "p.48",
+      "heading": "TOC × TOC",
+      "paragraphs": [
+        "The investor has a {{term:toc}}. So does the company. Z&C's rule is that the two must reinforce each other: \"one must strategically design a relationship where realizing the portfolio company's TOC contributes to achieving one's own TOC.\" When Z&C invested in Hitobito, the goal it set for itself was \"to deepen the understanding of agricultural and women's health issues.\" Three years later Hitobito's growth and its stronger ties to regional financial institutions had delivered Z&C's own TOC objective of \"increasing financial flow.\" The report's hope is that parent and sibling zebras adopt the same lens when they invest in foals."
+      ]
+    },
+    {
+      "type": "quote",
+      "src": "p.109",
+      "text": "I think the ideal form of zebra investment can take several forms, depending on investor intent. The first model is for those who simply pursue financial returns. In this case, while the returns themselves would be handled conventionally, voting rights need rethinking. ... The second model is investment driven by those who resonate with the mission. In this case, it may not have to take the form of equity. ... In some cases, a lending model like social banking could be more suitable. The third is an alliance model, where established firms and zebra companies share resources.",
+      "who": "Tomoyoshi Noda",
+      "role": "President and Chair, Graduate School of Leadership and Innovation, Shizenkan University; in dialogue with Yoshi Tabuchi"
+    },
+    {
+      "type": "tocpair",
+      "src": "pp.12-13, 104-105",
+      "heading": "Two maps, three years apart",
+      "intro": "Z&C drew a theory of change at founding and redrew it in 2024. The first put Z&C at the center, implementing the concept in society. The second puts zebra companies at the center and Z&C at the edge. An organization drawing itself smaller on its own map.",
+      "intro_draft": true,
+      "placeholder_note": "The English edition of the report carries both diagrams as artwork we cannot yet set in type. Until Z&C sends editable English versions, each map is shown here as its title and the report's own description of it.",
+      "placeholder_note_draft": true,
+      "left": {
+        "label": "2021",
+        "title": "Theory of Change: Drawing a Map of Change",
+        "center": "Zebras and Company",
+        "text": "\"To realize our vision of a 'thoughtful, healthy and enjoyable society,' we began by building a movement and a community. As our network grows through information sharing and dialogue, social issues become more visible, leading to the next actions. By theorizing the practical knowledge gained through investment and management advisory and sharing it openly, we cultivate the ground for collaboration with other players. The significance of zebra companies takes root in a society where diverse actors – financial institutions, government, the media, and citizens – intersect. This cycle is the process of 'change' as we see it.\"",
+        "src": "pp.12-13"
+      },
+      "right": {
+        "label": "New",
+        "title": "From a Movement Created by Zebras and Company to a Movement Woven by Zebra Companies",
+        "center": "Zebra companies",
+        "text": "\"The spark of the Zebras movement ignited by Z&C is now spreading beyond us, and is becoming a movement that belongs to zebra companies and their supporters. Zebra companies will herd together, and will be driven through a strong will and vision to create social impact through business activities by involving players in their respective regions and fields. Then, as connections are made across fields and regions, herds of zebra companies will form, eventually growing into a major swell that moves society as a whole.\"",
+        "src": "pp.104-105"
+      },
+      "ui": { "left": "Show 2021", "right": "Show new" }
+    },
+    {
+      "type": "rubric",
+      "src": "pp.46-47",
+      "heading": "What Z&C asks before it invests",
+      "intro": "Fifteen questions in four categories, from Z&C's zebra-style due diligence. The report's note: \"At the time of investment, perfection in all of these areas is not required. Rather, we consider whether Z&C's own capabilities can complement any gaps and form a mutually supportive relationship.\"",
+      "intro_draft": true,
+      "toggle_open": "Show the fifteen questions",
+      "toggle_close": "Hide the questions",
+      "groups": [
+        { "title": "Alignment with Z&C's TOC", "items": [
+          { "sub": "Alignment with the vision", "q": "How does this business contribute to realizing a \"thoughtful, healthy and enjoyable society\"?" },
+          { "sub": "Model potential", "q": "Does this business have the potential to increase the number of zebra companies, investors, and supporters, thereby expanding capital flow?" },
+          { "sub": "Additionality", "q": "Is it a model that other companies might want to emulate in terms of future scale and profitability?" }
+        ]},
+        { "title": "Social impact", "items": [
+          { "sub": "Clarity of impact", "q": "What social impact does the business aim to achieve? How will it contribute to transforming society?" },
+          { "sub": "Ripple effect", "q": "Whose awareness or behavior will this business influence or change, and in what ways?" },
+          { "sub": "Complexity of the social issue", "q": "How is the issue currently recognized or understood? How should that understanding evolve?" },
+          { "sub": "Alignment with the business", "q": "Does the growth of the business directly lead to an increase in social impact?" }
+        ]},
+        { "title": "Business viability", "items": [
+          { "sub": "Market potential", "q": "Who are the customers? What pain points are being addressed?" },
+          { "sub": "Profitability", "q": "Through what business model does the company generate profit?" },
+          { "sub": "Competitive advantage", "q": "What advantages does it have compared to others (including unicorn-type business models)?" },
+          { "sub": "Use of funds", "q": "What will the funds be used for, and how will they be utilized?" },
+          { "sub": "Financial soundness", "q": "Are there any major financial concerns (e.g., cash shortages, excessive debt, etc.)?" }
+        ]},
+        { "title": "Management team", "items": [
+          { "sub": "Management capability", "q": "What knowledge, experience, and networks do the founder and management team possess in relation to the business they are pursuing? What additional capacities will be required going forward?" },
+          { "sub": "Management attitude", "q": "In what aspects can a long-term, inclusive, and mutually beneficial management approach be observed?" },
+          { "sub": "Openness", "q": "Do the founder and management team demonstrate openness and transparency?" }
+        ]}
+      ]
+    },
+    {
+      "type": "cta",
+      "src": "pp.40-51",
+      "text": "The full LIFE type1 structure, the capital structure diagrams and the due diligence process are in the report, pp.40-51.",
+      "text_draft": true,
+      "label": "Download the report"
+    }
   ]
 }

@@ -3,11 +3,60 @@
   "number": "07",
   "word": "Your map",
   "gloss": "Draw your own theory of change",
-  "stub": true,
-  "lede": "The report ends by telling readers to draw their own theory of change. The site hands them the pen.",
+  "lede": "The report ends by telling readers to draw their own theory of change. This page hands you the pen.",
   "lede_draft": true,
   "blocks": [
-    { "type": "quote", "src": "p.13", "text": "If you are thinking of starting something, we encourage you to draw your own TOC. Imagine the future, put the path to it into words, and draw the lines. It will surely be the first step in connecting you with someone else.", "who": "Zebras and Company", "role": "Theory of Change: Drawing a Map of Change, p.13" },
-    { "type": "stub", "text": "Second pass. Planned: the guided six-question tool using Z&C's due diligence questions (p.47) laid out on the logic model's stages (p.48), with print and copy-as-text." }
+    {
+      "type": "quote",
+      "src": "p.13",
+      "large": true,
+      "text": "If you are thinking of starting something, we encourage you to draw your own TOC. Imagine the future, put the path to it into words, and draw the lines. It will surely be the first step in connecting you with someone else.",
+      "who": "Zebras and Company",
+      "role": "Theory of Change: Drawing a Map of Change, p.13"
+    },
+    {
+      "type": "prose",
+      "draft": true,
+      "src": "p.12, p.36, p.48",
+      "paragraphs": [
+        "Z&C calls its theory of change \"a navigation map to the future, showing what kind of society Z&C aims for and the route we will take to get there.\" The report's own tools are two: the {{term:logic-model}}, which runs from input and activity through output to short-, mid- and long-term outcomes, and the fifteen questions Z&C asks a company before investing. The tool below uses six of those questions, quoted as printed, and lays your answers out on the logic model's own frame."
+      ]
+    },
+    {
+      "type": "yourmap",
+      "src": "pp.13, 36, 46-48",
+      "heading": "Draw your own map",
+      "intro": "Six questions, one screen each. Your answers stay in this browser; nothing is sent anywhere. Come back and the draft will still be here.",
+      "intro_draft": true,
+      "ui_draft": true,
+      "ui": {
+        "start": "Begin",
+        "next": "Next",
+        "back": "Back",
+        "finish": "Draw the map",
+        "edit": "Edit answers",
+        "print": "Print or save as PDF",
+        "copy": "Copy as text",
+        "copied": "Copied",
+        "reset": "Start over",
+        "progress": "Question {n} of {total}",
+        "placeholder": "Write as much or as little as you like.",
+        "map_title": "Your theory of change",
+        "map_caption": "Imagine the future, put the path to it into words, and draw the lines.",
+        "map_caption_src": "p.13",
+        "empty": "Not yet written",
+        "fine": "Stays on this device. Clearing your browser data clears it too."
+      },
+      "questions": [
+        { "stage": "Long-term outcome", "sub": "Alignment with the vision", "q": "How does this business contribute to realizing a \"thoughtful, healthy and enjoyable society\"?", "src": "p.47" },
+        { "stage": "Mid-term outcome", "sub": "Ripple effect", "q": "Whose awareness or behavior will this business influence or change, and in what ways?", "src": "p.47" },
+        { "stage": "Short-term outcome", "sub": "Clarity of impact", "q": "What social impact does the business aim to achieve? How will it contribute to transforming society?", "src": "p.47" },
+        { "stage": "Output", "sub": "Alignment with the business", "q": "Does the growth of the business directly lead to an increase in social impact?", "src": "p.47" },
+        { "stage": "Activity", "sub": "Use of funds", "q": "What will the funds be used for, and how will they be utilized?", "src": "p.47" },
+        { "stage": "Input", "sub": "Management capability", "q": "What knowledge, experience, and networks do the founder and management team possess in relation to the business they are pursuing? What additional capacities will be required going forward?", "src": "p.47" }
+      ],
+      "stages_order": ["Input", "Activity", "Output", "Short-term outcome", "Mid-term outcome", "Long-term outcome"],
+      "stages_src": "p.48"
+    }
   ]
 }
