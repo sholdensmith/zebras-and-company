@@ -1,6 +1,11 @@
-/* Nav state, scroll spy, reveal-on-entry. No dependencies. */
+/* Sidebar state, scroll spy, reveal-on-entry. No dependencies. */
 (function () {
   'use strict';
+
+  /* ?drafts in the URL shows the DRAFT markers on connective prose */
+  if (/[?&]drafts\b/.test(window.location.search) || window.location.hash === '#drafts') {
+    document.documentElement.classList.add('show-drafts');
+  }
 
   var nav = document.querySelector('[data-nav]');
   var links = Array.prototype.slice.call(document.querySelectorAll('[data-nav-link]'));
@@ -8,46 +13,33 @@
   var toggle = document.querySelector('[data-nav-toggle]');
   var stops = links.map(function (a) { return document.getElementById(a.getAttribute('data-nav-link')); }).filter(Boolean);
 
-  /* Mobile: open and close the card */
+  /* Narrow screens: the bar opens and closes the list */
+  function close() {
+    if (!nav || !toggle) return;
+    nav.classList.remove('is-open');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.textContent = 'Menu';
+    document.body.style.overflow = '';
+  }
   if (toggle && nav) {
     toggle.addEventListener('click', function () {
       var open = nav.classList.toggle('is-open');
       toggle.setAttribute('aria-expanded', String(open));
       toggle.textContent = open ? 'Close' : 'Menu';
+      document.body.style.overflow = open ? 'hidden' : '';
     });
-    nav.addEventListener('mouseleave', function () {
-      if (nav.classList.contains('is-compact')) {
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.textContent = 'Menu';
-      }
-    });
-    links.forEach(function (a) {
-      a.addEventListener('click', function () {
-        nav.classList.remove('is-open');
-        toggle.setAttribute('aria-expanded', 'false');
-        toggle.textContent = 'Menu';
-      });
-    });
+    links.forEach(function (a) { a.addEventListener('click', close); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
   }
 
-  /* Fold the card once the hero has scrolled past */
-  var hero = document.querySelector('.hero');
-  function compact() {
-    if (!nav || !hero) return;
-    nav.classList.toggle('is-compact', window.scrollY > hero.offsetHeight - 120);
-  }
-  window.addEventListener('scroll', compact, { passive: true });
-  compact();
-
-  /* Scroll spy: the stop whose top is nearest above the middle of the viewport */
+  /* Scroll spy: the stop whose top is nearest above the upper part of the viewport */
   function setActive(id) {
     links.forEach(function (a) {
       var on = a.getAttribute('data-nav-link') === id;
       a.classList.toggle('is-active', on);
       if (on) {
         a.setAttribute('aria-current', 'location');
-        if (current) current.textContent = a.querySelector('.nav-card__word').textContent;
+        if (current) current.textContent = a.querySelector('.sidebar__word').textContent;
       } else {
         a.removeAttribute('aria-current');
       }

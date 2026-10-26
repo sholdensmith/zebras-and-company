@@ -49,10 +49,10 @@ const R = {
   stats(b, stop) {
     note(stop, 'Figures', b.src);
     return `<div class="block reveal" data-exception="${b.exception ? 'stat-block' : ''}">
-      <div class="stats">${b.items
+      <div class="stats stats--tiles">${b.items
         .map(
           (i) => `<div class="stat">
-            <div class="stat__num${String(i.num).length > 6 ? ' stat__num--long' : ''}">${esc(i.num)}${i.unit ? `<small>${esc(i.unit)}</small>` : ''}</div>
+            <div class="stat__num${String(i.num).length > 8 ? ' stat__num--long' : ''}">${esc(i.num)}${i.unit ? `<small>${esc(i.unit)}</small>` : ''}</div>
             <div class="stat__gloss">${text(i.gloss)}</div>
           </div>`
         )
@@ -161,7 +161,7 @@ const R = {
         ${b.rings
           .map(
             (r, i) => `<div class="eco__ring">
-            <button type="button" aria-expanded="false" aria-controls="eco-${i}"><h3>${esc(r.title)}</h3><span class="arrow"></span></button>
+            <button class="row-toggle" type="button" aria-expanded="false" aria-controls="eco-${i}"><h3>${esc(r.title)}</h3><span class="disc" aria-hidden="true"><span class="arrow"></span></span></button>
             <div class="eco__body" id="eco-${i}" hidden>
               <ul>${r.actors.map((a) => `<li>${esc(a)}</li>`).join('')}</ul>
               <p class="eco__flow">${esc(r.flow)}</p>
@@ -241,7 +241,7 @@ const R = {
     return `<div class="block reveal">
       <h3>${esc(b.heading)}</h3>
       ${b.intro ? `<p class="measure${draftCls(b.intro_draft)}">${text(b.intro)}</p>` : ''}
-      <button class="rubric__toggle" type="button" aria-expanded="false" aria-controls="rubric-body" data-rubric-toggle data-open="${esc(b.toggle_open)}" data-close="${esc(b.toggle_close)}">${esc(b.toggle_open)}<span class="arrow"></span></button>
+      <button class="rubric__toggle" type="button" aria-expanded="false" aria-controls="rubric-body" data-rubric-toggle data-open="${esc(b.toggle_open)}" data-close="${esc(b.toggle_close)}">${esc(b.toggle_open)}<span class="disc" aria-hidden="true"><span class="arrow"></span></span></button>
       <div class="rubric" id="rubric-body" hidden>
         ${b.groups
           .map(
@@ -260,7 +260,7 @@ const R = {
     note(stop, 'Download pointer', b.src);
     return `<div class="block reveal cta">
       <p class="measure${draftCls(b.text_draft)}">${esc(b.text)}</p>
-      <a class="pill pill--outline" href="${esc(frame.report_pdf)}" download>${esc(b.label)}<span class="arrow"></span></a>
+      <a class="pill pill--outline pill--sm" href="${esc(frame.report_pdf)}" download>${esc(b.label)}<span class="arrow"></span></a>
     </div>`;
   },
 
@@ -283,10 +283,10 @@ const R = {
         b.stats
           ? `<div data-exception="stat-block">
           <p class="eyebrow">${esc(b.stats_heading)}</p>
-          <div class="stats stats--case">${b.stats
+          <div class="stats stats--row">${b.stats
             .map(
               (i) => `<div class="stat">
-              <div class="stat__num${String(i.num).length > 6 ? ' stat__num--long' : ''}">${esc(i.num)}${i.unit ? `<small>${esc(i.unit)}</small>` : ''}</div>
+              <div class="stat__num${String(i.num).length > 8 ? ' stat__num--long' : ''}">${esc(i.num)}${i.unit ? `<small>${esc(i.unit)}</small>` : ''}</div>
               <div class="stat__gloss">${text(i.gloss)}</div>
             </div>`
             )
@@ -344,29 +344,26 @@ const R = {
     </div>`;
   },
 
-  /* Two-lane timeline (Stop 6) */
+  /* Timeline (Stop 6): vertical, every point open, to the designers' timeline frame.
+     The two lanes (Global, Japan) ride along as a tag on the year and as the open or filled square. */
   timeline(b, stop) {
     note(stop, b.heading, b.src);
     return `<div class="block reveal">
       <h3>${esc(b.heading)}</h3>
       ${b.intro ? `<p class="measure${draftCls(b.intro_draft)}">${text(b.intro)}</p>` : ''}
-      <div class="timeline" data-timeline>
-        <div class="timeline__lanes" aria-hidden="true">${b.lanes.map((l) => `<span>${esc(l)}</span>`).join('')}</div>
+      <div class="timeline">
         <ol class="timeline__track">${b.items
           .map(
-            (i, n) => `<li class="timeline__point timeline__point--lane${i.lane}">
-            <button type="button" data-tl="${n}" aria-expanded="false" aria-controls="tl-${n}">
-              <span class="timeline__year">${esc(i.year)}</span>
-              <span class="timeline__dot"></span>
-              <span class="timeline__title">${esc(i.title)}</span>
-            </button>
-            <div class="timeline__body" id="tl-${n}" hidden><p>${text(i.text)}</p><small>${esc(i.src)}</small></div>
+            (i) => `<li class="timeline__point timeline__point--lane${i.lane}">
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__year">${esc(i.year)}<small>${esc(b.lanes[i.lane])}</small></span>
+            <span class="timeline__title">${esc(i.title)}</span>
+            <div class="timeline__body"><p>${text(i.text)}</p><small>${esc(i.src)}</small></div>
           </li>`
           )
           .join('')}</ol>
-        <div class="timeline__detail" data-tl-detail aria-live="polite"></div>
         <p class="timeline__legend">${b.lanes
-          .map((l, i) => `<span><span class="timeline__dot timeline__dot--legend${i ? ' timeline__dot--filled' : ''}" aria-hidden="true"></span>${esc(l)}</span>`)
+          .map((l, i) => `<span><span class="timeline__dot timeline__dot--legend${i ? '' : ' timeline__dot--open'}" aria-hidden="true"></span>${esc(l)}</span>`)
           .join('')}</p>
       </div>
     </div>`;
@@ -392,7 +389,7 @@ const R = {
             )
             .join('')}
           <div class="yourmap__nav">
-            <button class="arrow-btn arrow-btn--prev" type="button" data-ym-back aria-label="${esc(u.back)}"><span class="arrow"></span></button>
+            <button class="disc disc--lg disc--prev" type="button" data-ym-back aria-label="${esc(u.back)}"><span class="arrow"></span></button>
             <button class="pill" type="button" data-ym-next>${esc(u.next)}<span class="arrow"></span></button>
             <button class="pill" type="submit" data-ym-finish hidden>${esc(u.finish)}<span class="arrow"></span></button>
           </div>
@@ -420,61 +417,78 @@ const R = {
 };
 
 /* ---------- page pieces ---------- */
-function navCard() {
-  return `<nav class="nav-card" aria-label="The argument" data-nav>
-    <div class="nav-card__head">
-      <span class="nav-card__title">${esc(frame.nav_title)}</span>
-      <span class="nav-card__current" data-current data-default="${esc(frame.nav_title)}">${esc(frame.nav_title)}</span>
-      <button class="nav-card__toggle" type="button" aria-expanded="false" data-nav-toggle>Menu</button>
+const LOGO_WHITE = 'assets/brand/zc-logo-white.png';
+const ZEBRA = 'assets/brand/zebra.png';
+
+/* The sidebar: logo, title, pink rule, the seven stops, the download. A bar across the top on narrow screens. */
+function sidebar() {
+  return `<nav class="sidebar" aria-label="${esc(frame.nav_title)}" data-nav>
+    <a class="sidebar__logo" href="${esc(frame.logo.href)}"><img src="${LOGO_WHITE}" alt="${esc(frame.logo.text)}" width="92" height="56"></a>
+    <div class="sidebar__title"><b>${esc(frame.logo.text)}</b><span>${esc(frame.hero.eyebrow)}</span></div>
+    <span class="sidebar__current" data-current data-default="${esc(frame.nav_title)}">${esc(frame.nav_title)}</span>
+    <button class="sidebar__toggle" type="button" aria-expanded="false" aria-controls="sidebar-nav" data-nav-toggle>Menu</button>
+    <div class="sidebar__nav" id="sidebar-nav">
+      <hr class="sidebar__rule">
+      <p class="sidebar__heading">${esc(frame.nav_title)}</p>
+      <ol class="sidebar__list">
+        ${frame.stops
+          .map(
+            (s) => `<li><a href="#${s.id}" data-nav-link="${s.id}"><span class="sidebar__word">${esc(s.word)}</span><span class="sidebar__gloss">${esc(
+              s.gloss
+            )}</span></a></li>`
+          )
+          .join('')}
+      </ol>
+      <div class="sidebar__foot">
+        <a class="pill pill--pink pill--sm" href="${esc(frame.report_pdf)}" download>${esc(frame.download_label)}<span class="arrow"></span></a>
+      </div>
     </div>
-    <ol class="nav-card__list">
-      ${frame.stops
-        .map(
-          (s) => `<li><a href="#${s.id}" data-nav-link="${s.id}"><span><span class="nav-card__word">${esc(s.word)}</span><span class="nav-card__gloss">${esc(
-            s.gloss
-          )}</span></span></a></li>`
-        )
-        .join('')}
-    </ol>
-    <a class="pill pill--sm" href="${esc(frame.report_pdf)}" download>${esc(frame.download_label)}<span class="arrow"></span></a>
   </nav>`;
 }
 
+/* The hero: dark field, green bar on the left, pink and blue patterned blocks on the right */
 function hero() {
   const h = frame.hero;
-  return `<header class="hero">
-    <div class="hero__img" role="img" aria-label="Photograph placeholder"></div>
-    <div class="veil" aria-hidden="true"></div>
-    <div class="logo"><a href="${esc(frame.logo.href)}">${esc(frame.logo.text)}</a></div>
-    <div class="container hero__inner">
-      <p class="eyebrow" style="color:rgba(255,255,255,.8)">${esc(h.eyebrow)}</p>
+  return `<header class="hero bleed">
+    <div class="hero__bar" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="eyebrow">${esc(h.eyebrow)}</p>
       <h1>${esc(h.title)}</h1>
       <p class="hero__sub${draftCls(h.sub_draft)}">${esc(h.sub)}</p>
       <div class="hero__actions">
-        <a class="pill pill--white" href="${esc(h.primary.href)}">${esc(h.primary.label)}<span class="arrow"></span></a>
+        <a class="pill pill--pink" href="${esc(h.primary.href)}">${esc(h.primary.label)}<span class="arrow"></span></a>
         <a class="pill pill--outline" href="${esc(h.secondary.href)}" download>${esc(h.secondary.label)}<span class="arrow"></span></a>
       </div>
+    </div>
+    <div class="hero__blocks" aria-hidden="true">
+      <div class="hero__block hero__block--pink"></div>
+      <div class="hero__block hero__block--blue"></div>
     </div>
   </header>`;
 }
 
+/* The statement, set large under the hero */
 function statement() {
   const s = frame.statement;
   note('Frame', 'Statement panel', s.src);
-  return `<div class="container"><section class="panel${draftCls(s.draft)}" aria-label="About this page">
+  return `<section class="container intro${draftCls(s.draft)}" aria-label="About this page">
     ${s.paragraphs.map((p) => `<p>${text(p)}</p>`).join('')}
-  </section></div>`;
+  </section>`;
 }
 
-function stop(s) {
+/* A stop: the band, the head (eyebrow, title, gloss, lede; the zebra beside the first one), then the blocks */
+function stop(s, index) {
   const label = `${s.number}. ${s.word}`;
   const theme = s.theme ? ` stop--${s.theme}` : '';
-  return `<section class="stop${theme}${s.stub ? ' stop--stub' : ''}" id="${s.id}" aria-labelledby="${s.id}-title">
-    <div class="container stop__grid">
+  const dark = s.theme === 'objection';
+  return `<section class="stop${theme}${s.stub ? ' stop--stub' : ''}${dark ? ' full' : ''}" id="${s.id}" aria-labelledby="${s.id}-title">
+    <div class="bleed"><div class="band" aria-hidden="true"></div></div>
+    <div class="container">
       <div class="stop__head">
-        <span class="stop__num">Stop ${esc(s.number)}</span>
+        <span class="stop__num eyebrow">Stop ${esc(s.number)}</span>
         <h2 id="${s.id}-title">${esc(s.word)}<span class="gloss">${esc(s.gloss)}</span></h2>
         <p class="stop__lede${draftCls(s.lede_draft)}">${text(s.lede)}</p>
+        ${index === 0 ? `<img class="stop__zebra" src="${ZEBRA}" alt="" width="150" height="109">` : ''}
       </div>
       <div class="stop__body">
         ${s.blocks.map((b) => (R[b.type] ? R[b.type](b, label) : `<!-- unknown block ${b.type} -->`)).join('\n')}
@@ -483,17 +497,19 @@ function stop(s) {
   </section>`;
 }
 
+/* The closing field and footer: green */
 function closing() {
   const c = frame.closing;
   note('Closing', 'Closing line', c.body_src);
-  return `<footer class="brandfield">
+  return `<footer class="brandfield full">
     <div class="container">
+      <img class="brandfield__logo" src="${LOGO_WHITE}" alt="${esc(frame.logo.text)}" width="92" height="56">
       <h2 class="${c.title_draft ? 'draft' : ''}">${esc(c.title)}</h2>
-      <p class="measure-narrow" style="margin-top:var(--space-6);font-size:18px">${esc(c.body)}</p>
-      <div class="hero__actions">
-        <a class="pill pill--white" href="${esc(c.primary.href)}" download>${esc(c.primary.label)}<span class="arrow"></span></a>
+      <p class="brandfield__body">${esc(c.body)}</p>
+      <div class="brandfield__actions">
+        <a class="pill pill--pink" href="${esc(c.primary.href)}" download>${esc(c.primary.label)}<span class="arrow"></span></a>
       </div>
-      <p style="margin-top:var(--space-6);font-size:14px">${c.links
+      <p class="brandfield__links">${c.links
         .map((l) => `<a href="${esc(l.href)}">${esc(l.label)}</a>`)
         .join(' &nbsp;·&nbsp; ')}</p>
       <div class="footer-grid">
@@ -505,13 +521,13 @@ function closing() {
           )
           .join('')}
       </div>
-      <p style="margin-top:var(--space-7);font-size:12px;opacity:.8">${esc(frame.footer.fine_print)}</p>
+      <p class="brandfield__fine">${esc(frame.footer.fine_print)}</p>
     </div>
   </footer>`;
 }
 
 function sourcesStrip() {
-  return `<section class="sources" aria-label="Sources">
+  return `<section class="sources full" aria-label="Sources">
     <div class="container">
       <p class="eyebrow">Sources in the report</p>
       <ul>${sources.map((s) => `<li><b>${esc(s.stop)}</b> · ${esc(s.label)} · ${esc(s.src)}</li>`).join('')}</ul>
@@ -521,13 +537,15 @@ function sourcesStrip() {
 
 /* ---------- assemble ---------- */
 const body = [
-  navCard(),
+  sidebar(),
+  `<div class="content">`,
   hero(),
   statement(),
   `<main id="main">${stops.map(stop).join('\n')}</main>`,
   closing(),
 ];
 body.push(sourcesStrip()); // after stops so the list is complete
+body.push(`</div>`);
 
 const html = `<!doctype html>
 <html lang="${lang}" class="no-js">
@@ -536,9 +554,7 @@ const html = `<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(frame.title)} · Zebras and Company</title>
 <meta name="description" content="${esc(frame.meta_description)}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#231F20">
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
@@ -553,7 +569,6 @@ ${body.join('\n')}
 <script src="js/founders.js" defer></script>
 <script src="js/ecosystem.js" defer></script>
 <script src="js/ledgers.js" defer></script>
-<script src="js/timeline.js" defer></script>
 <script src="js/tocpair.js" defer></script>
 <script src="js/rubric.js" defer></script>
 <script src="js/yourmap.js" defer></script>

@@ -1,49 +1,22 @@
-/* Per-stop layout */
+/* Per-stop layout: one column, a band above each head */
 
-.stop__head {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: var(--space-4);
-  margin-bottom: clamp(var(--space-7), 6vw, var(--space-9));
-}
-.stop__num {
-  font-family: var(--font-display);
-  font-size: var(--size-label);
-  letter-spacing: var(--track-label);
-  color: var(--text-muted);
-}
-.stop__lede {
-  font-size: clamp(18px, 1.7vw, 24px);
-  line-height: 1.6;
-  max-width: 34ch;
-}
+.stop .band { margin-bottom: clamp(36px, 5vw, 56px); }
+.stop__body > .block:first-child { margin-top: 0; }
+.stop__body > .block:last-child { margin-bottom: 0; }
 
-/* Two-column: heading left, content right, on wide screens */
-@media (min-width: 1100px) {
-  .stop__grid {
-    display: grid;
-    grid-template-columns: minmax(280px, 380px) minmax(0, var(--container-text));
-    column-gap: var(--space-9);
-    align-items: start;
-  }
-  .stop__grid > .stop__head {
-    position: sticky;
-    top: var(--space-9);
-    margin-bottom: 0;
-  }
-}
-
-/* Stop 5: one voice, generous white space */
+/* Stop 5: one voice, dark field, pink bars, generous white space */
 .stop--objection {
-  background: var(--zc-black);
+  background: var(--zc-brown);
   color: var(--zc-white);
-  border-top: 0;
-  padding-block: clamp(var(--space-10), 14vw, var(--space-12));
+  padding-block: clamp(var(--space-9), 12vw, var(--space-12));
 }
-.stop--objection h2, .stop--objection .stop__num, .stop--objection .eyebrow { color: var(--zc-white); }
-.stop--objection .quote { border-color: var(--zc-white); }
-.stop--objection .quote footer { color: var(--zc-grey-400); }
-.stop--objection .quote--bare p { color: var(--zc-white); }
-.stop--objection + .stop { border-top: 0; }
-
+.stop--objection .band { display: none; }
+.stop--objection h2, .stop--objection .stop__lede, .stop--objection h2 .gloss { color: var(--zc-white); }
+.stop--objection .stop__num { color: var(--zc-pink); }
+.stop--objection .quote { border-color: var(--zc-pink); }
+.stop--objection .quote p, .stop--objection .quote footer { color: var(--zc-white); }
+.stop--objection .quote--large p { color: var(--zc-pink); }
+.stop--objection .muted { color: rgba(255,255,255,.7); }
+.stop--objection .block > * + * { margin-top: var(--space-5); }
+.stop--objection .quote { max-width: 620px; }
 

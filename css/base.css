@@ -1,4 +1,4 @@
-/* Base: reset, type, measure, rhythm */
+/* Base: reset, type, page frame (sidebar + column), rhythm */
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -14,8 +14,8 @@ body {
   margin: 0;
   background: var(--zc-white);
   color: var(--text-body);
-  font-family: var(--font-serif);
-  font-size: clamp(var(--size-body-min), 1rem, var(--size-body-max));
+  font-family: var(--font-sans);
+  font-size: var(--size-body);
   line-height: var(--lh-body);
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -25,81 +25,136 @@ img, svg { display: block; max-width: 100%; }
 [hidden] { display: none !important; }
 
 a {
-  color: var(--accent-link);
-  text-decoration: none;
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
   transition: color var(--dur-fast) var(--ease-out), opacity var(--dur-fast) var(--ease-out);
 }
-a:hover { color: var(--zc-black); }
+a:hover { color: var(--zc-brown); }
 
-/* Display type: bold condensed uppercase, always tracked. Never lowercase. */
-.display,
-h1, h2, h3 {
+/* ---------- Type scale, from the style guide ---------- */
+/* H1: Libre Caslon Condensed Regular, uppercase. Only the hero uses it. */
+h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  font-size: clamp(40px, 5.4vw, 68px);
+  line-height: 1.04;
+  margin: 0;
+}
+/* H2: Libre Caslon Condensed Bold, uppercase. Stop titles. */
+h2, .display {
   font-family: var(--font-display);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: var(--track-display);
-  line-height: 1.05;
+  letter-spacing: .005em;
+  font-size: clamp(32px, 3.8vw, 48px);
+  line-height: 1.08;
   margin: 0;
-  color: var(--zc-black);
+  color: var(--zc-brown);
 }
-h1 { font-size: clamp(40px, 7vw, 96px); letter-spacing: var(--track-hero); }
-h2 { font-size: clamp(30px, 4.2vw, 56px); }
-h3 { font-size: var(--size-title); }
+/* H3: Figtree Semibold, sentence case. Block headings. */
+h3 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.3;
+  letter-spacing: -.005em;
+  margin: 0;
+  color: var(--zc-brown);
+}
+/* H4: Libre Caslon Condensed Bold, sentence case. Labels inside blocks, names on quotes. */
+h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 1.3;
+  margin: 0 0 var(--space-2);
+  color: var(--zc-brown);
+}
 
-/* Serif gloss under a display word */
+/* Gloss under a heading */
 .gloss {
   display: block;
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: var(--size-gloss);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--size-small);
   text-transform: none;
   letter-spacing: 0;
   line-height: 1.5;
   color: var(--text-muted);
   margin-top: var(--space-2);
 }
+h2 .gloss { font-size: 18px; margin-top: var(--space-3); color: var(--zc-brown); font-weight: 500; }
 
-/* Eyebrow: tracked uppercase label */
+/* Eyebrow: Figtree Semibold, uppercase, green */
 .eyebrow {
-  font-family: var(--font-display);
+  font-family: var(--font-sans);
   font-weight: 600;
   font-size: var(--size-label);
   text-transform: uppercase;
   letter-spacing: var(--track-label);
-  color: var(--text-muted);
-  margin: 0 0 var(--space-4);
+  color: var(--accent);
+  margin: 0 0 var(--space-3);
 }
 
 p { margin: 0 0 var(--space-5); }
 p:last-child { margin-bottom: 0; }
+strong, b { font-weight: 600; }
 
 .muted { color: var(--text-muted); }
 
-/* Containers */
-.container {
-  width: 100%;
-  max-width: var(--container-max);
-  margin-inline: auto;
+/* ---------- Page frame: sidebar nav on the left, one column of content ---------- */
+.page {
+  min-height: 100vh;
+}
+.content {
   padding-inline: var(--gutter-page);
 }
-.measure {
-  max-width: var(--container-text);
+.container {
+  width: 100%;
+  max-width: var(--column);
+  margin-inline: auto;
 }
-.measure-narrow { max-width: 640px; }
+/* Hero and bands run past the column by --bleed on wide screens */
+.bleed {
+  width: 100%;
+  max-width: calc(var(--column) + 2 * var(--bleed));
+  margin-inline: auto;
+}
+.measure { max-width: 640px; }
+.measure-narrow { max-width: 520px; }
+/* Full-bleed field: paints to the edges of the content area, past the gutters */
+.full {
+  margin-inline: calc(-1 * var(--gutter-page));
+  padding-inline: var(--gutter-page);
+}
 
-/* Rhythm: 32 inside a block, 48-64 between blocks, 96-128 between sections */
+@media (min-width: 1100px) {
+  .content { padding-left: calc(var(--sidebar-w) + var(--gutter-page)); }
+}
+@media (max-width: 1099px) {
+  .content { padding-top: var(--topbar-h); }
+}
+
+/* Rhythm */
 .stop {
-  padding-block: clamp(var(--space-9), 10vw, var(--space-10));
+  padding-block: clamp(56px, 6.5vw, var(--space-9));
   scroll-margin-top: var(--space-6);
 }
-.stop + .stop { border-top: 1px solid var(--zc-grey-100); }
 .block { margin-block: clamp(var(--space-7), 5vw, var(--space-8)); }
-.block > * + * { margin-top: var(--space-6); }
+.block > * + * { margin-top: var(--space-5); }
+.block > h3 + .measure, .block > h3 + p { margin-top: var(--space-4); }
+
+/* Hairline */
+.rule { border: 0; border-top: 1px solid var(--zc-rule); margin: 0; }
 
 /* Reveal on entry: fade-up, 700ms */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
+  transform: translateY(14px);
   transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
 }
 .reveal.is-visible { opacity: 1; transform: none; }
@@ -117,27 +172,30 @@ p:last-child { margin-bottom: 0; }
 }
 
 :focus-visible {
-  outline: 2px solid var(--zc-black);
+  outline: 2px solid var(--zc-blue);
   outline-offset: 3px;
 }
 
-/* Draft marker: prose we wrote from report language, for Scott to rewrite in place. Removed at launch. */
+/* Draft marker: prose we wrote from report language, for rewriting in place.
+   Hidden by default so the page can be shown to the client; add ?drafts to the URL to see the tags. */
 .draft { position: relative; }
-.draft::before {
+.show-drafts .draft::before {
   content: "DRAFT";
   position: absolute;
   left: calc(-1 * var(--space-7));
-  top: .35em;
-  font-family: var(--font-display);
+  top: .45em;
+  font-family: var(--font-sans);
+  font-weight: 600;
   font-size: 10px;
   letter-spacing: var(--track-label);
-  color: var(--zc-red);
+  color: var(--zc-draft);
 }
 @media (max-width: 720px) {
-  .draft::before { left: 0; top: -1.4em; }
+  .show-drafts .draft::before { left: 0; top: -1.4em; }
 }
 
 @media print {
-  .nav-card, .pill, .reveal { display: none !important; }
+  .sidebar, .pill, .reveal { display: none !important; }
+  .content { padding: 0 !important; }
   body { font-size: 11pt; }
 }

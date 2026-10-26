@@ -5,9 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Different Scale, Different Future · Zebras and Company</title>
 <meta name="description" content="The Zebras and Company Impact Journey Report 2021-2023, told in seven stops for people who would rather not read 67 pages tonight.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#231F20">
 <link rel="stylesheet" href="css/tokens.css">
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/components.css">
@@ -16,44 +14,54 @@
 </head>
 <body>
 <a class="visually-hidden" href="#main">Skip to content</a>
-<nav class="nav-card" aria-label="The argument" data-nav>
-    <div class="nav-card__head">
-      <span class="nav-card__title">The argument</span>
-      <span class="nav-card__current" data-current data-default="The argument">The argument</span>
-      <button class="nav-card__toggle" type="button" aria-expanded="false" data-nav-toggle>Menu</button>
+<nav class="sidebar" aria-label="The argument" data-nav>
+    <a class="sidebar__logo" href="https://www.zebrasand.co.jp/"><img src="assets/brand/zc-logo-white.png" alt="Zebras and Company" width="92" height="56"></a>
+    <div class="sidebar__title"><b>Zebras and Company</b><span>Impact Journey Report 2021-2023</span></div>
+    <span class="sidebar__current" data-current data-default="The argument">The argument</span>
+    <button class="sidebar__toggle" type="button" aria-expanded="false" aria-controls="sidebar-nav" data-nav-toggle>Menu</button>
+    <div class="sidebar__nav" id="sidebar-nav">
+      <hr class="sidebar__rule">
+      <p class="sidebar__heading">The argument</p>
+      <ol class="sidebar__list">
+        <li><a href="#stop-1" data-nav-link="stop-1"><span class="sidebar__word">It worked</span><span class="sidebar__gloss">A three-person company changed national policy</span></a></li><li><a href="#stop-2" data-nav-link="stop-2"><span class="sidebar__word">What a zebra is</span><span class="sidebar__gloss">The definition Z&amp;C refuses to fix</span></a></li><li><a href="#stop-3" data-nav-link="stop-3"><span class="sidebar__word">How it is financed</span><span class="sidebar__gloss">Money has a color</span></a></li><li><a href="#stop-4" data-nav-link="stop-4"><span class="sidebar__word">Three cases</span><span class="sidebar__gloss">Persimmons, a coup, one golden share</span></a></li><li><a href="#stop-5" data-nav-link="stop-5"><span class="sidebar__word">The objection</span><span class="sidebar__gloss">The question Z&amp;C cannot yet answer</span></a></li><li><a href="#stop-6" data-nav-link="stop-6"><span class="sidebar__word">Why Japan</span><span class="sidebar__gloss">The ethic was already here</span></a></li><li><a href="#stop-7" data-nav-link="stop-7"><span class="sidebar__word">Your map</span><span class="sidebar__gloss">Draw your own theory of change</span></a></li>
+      </ol>
+      <div class="sidebar__foot">
+        <a class="pill pill--pink pill--sm" href="assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf" download>Download the report<span class="arrow"></span></a>
+      </div>
     </div>
-    <ol class="nav-card__list">
-      <li><a href="#stop-1" data-nav-link="stop-1"><span><span class="nav-card__word">It worked</span><span class="nav-card__gloss">A three-person company changed national policy</span></span></a></li><li><a href="#stop-2" data-nav-link="stop-2"><span><span class="nav-card__word">What a zebra is</span><span class="nav-card__gloss">The definition Z&amp;C refuses to fix</span></span></a></li><li><a href="#stop-3" data-nav-link="stop-3"><span><span class="nav-card__word">How it is financed</span><span class="nav-card__gloss">Money has a color</span></span></a></li><li><a href="#stop-4" data-nav-link="stop-4"><span><span class="nav-card__word">Three cases</span><span class="nav-card__gloss">Persimmons, a coup, one golden share</span></span></a></li><li><a href="#stop-5" data-nav-link="stop-5"><span><span class="nav-card__word">The objection</span><span class="nav-card__gloss">The question Z&amp;C cannot yet answer</span></span></a></li><li><a href="#stop-6" data-nav-link="stop-6"><span><span class="nav-card__word">Why Japan</span><span class="nav-card__gloss">The ethic was already here</span></span></a></li><li><a href="#stop-7" data-nav-link="stop-7"><span><span class="nav-card__word">Your map</span><span class="nav-card__gloss">Draw your own theory of change</span></span></a></li>
-    </ol>
-    <a class="pill pill--sm" href="assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf" download>Download the report<span class="arrow"></span></a>
   </nav>
-<header class="hero">
-    <div class="hero__img" role="img" aria-label="Photograph placeholder"></div>
-    <div class="veil" aria-hidden="true"></div>
-    <div class="logo"><a href="https://www.zebrasand.co.jp/">Zebras and Company</a></div>
-    <div class="container hero__inner">
-      <p class="eyebrow" style="color:rgba(255,255,255,.8)">Impact Journey Report 2021-2023</p>
+<div class="content">
+<header class="hero bleed">
+    <div class="hero__bar" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="eyebrow">Impact Journey Report 2021-2023</p>
       <h1>Different Scale, Different Future</h1>
       <p class="hero__sub">What happened when three people set out to prove that a company can grow without growing at any cost. The Impact Journey Report 2021-2023, in seven stops.</p>
       <div class="hero__actions">
-        <a class="pill pill--white" href="#stop-1">Start the journey<span class="arrow"></span></a>
+        <a class="pill pill--pink" href="#stop-1">Start the journey<span class="arrow"></span></a>
         <a class="pill pill--outline" href="assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf" download>Download the report<span class="arrow"></span></a>
       </div>
     </div>
+    <div class="hero__blocks" aria-hidden="true">
+      <div class="hero__block hero__block--pink"></div>
+      <div class="hero__block hero__block--blue"></div>
+    </div>
   </header>
-<div class="container"><section class="panel draft" aria-label="About this page">
+<section class="container intro draft" aria-label="About this page">
     <p>We founded Zebras and Company in March 2021 to back zebra companies: businesses that pursue social and economic goals together, over long horizons, in mutual benefit with their communities. Three years on, we wrote this report not as a typical impact report but as a letter from us, who are just a little further down the road, a kind of travel diary of what we have learned by walking alongside zebra companies.</p><p>This site takes the report's argument and turns it around. Proof first, definition second, the money, three cases, the criticism we still cannot fully answer, why the idea took root here, and then a pen for you. The report summarizes our activities up to fiscal year 2023.</p>
-  </section></div>
+  </section>
 <main id="main"><section class="stop" id="stop-1" aria-labelledby="stop-1-title">
-    <div class="container stop__grid">
+    <div class="bleed"><div class="band" aria-hidden="true"></div></div>
+    <div class="container">
       <div class="stop__head">
-        <span class="stop__num">Stop 01</span>
+        <span class="stop__num eyebrow">Stop 01</span>
         <h2 id="stop-1-title">It worked<span class="gloss">A three-person company changed national policy</span></h2>
         <p class="stop__lede draft">Three people and 88.5 million yen put &quot;zebra companies&quot; into Japan's national strategy in twenty-seven months, and the state then funded twenty regions to try it.</p>
+        <img class="stop__zebra" src="assets/brand/zebra.png" alt="" width="150" height="109">
       </div>
       <div class="stop__body">
         <div class="block reveal" data-exception="stat-block">
-      <div class="stats"><div class="stat">
+      <div class="stats stats--tiles"><div class="stat">
             <div class="stat__num">3</div>
             <div class="stat__gloss">co-founders: Yohei Azakami, Yoshi Tabuchi, Yuji Suyama</div>
           </div><div class="stat">
@@ -73,7 +81,7 @@
       <div class="measure"><p>In June 2023, zebra companies were written into the Japanese government's <button class="term" type="button" aria-expanded="false" aria-controls="term-basic-policies-1">Basic Policies (Basic Policies for Economic and Fiscal Management and Reform)</button><span class="term-def" id="term-basic-policies-1" hidden><strong>Basic Policies (Basic Policies for Economic and Fiscal Management and Reform)</strong>A government policy document outlining Japan's core economic and fiscal strategies. It specifies concrete implementation measures toward goals such as economic growth and fiscal soundness, is updated annually, and serves as a key guideline for major policy decisions. <span class="muted">(Glossary, pp.124-125)</span></span> and its Grand Design and Implementation Plan for New Capitalism. The text reads: &quot;Additionally, efforts will be made to create and promote small and medium-sized enterprises that serve as drivers for solving social challenges in the rural region and attract impact investments (zebra).&quot;</p><p>It did not happen overnight. In 2022 the Small and Medium Enterprise Agency introduced the concept in its White Paper on Small and Medium Enterprises. Z&amp;C presented at a Liberal Democratic Party meeting, where policymakers said the idea &quot;should be positioned as a national strategy.&quot; Z&amp;C then joined the Agency's study group on ecosystems for solving regional social issues, which produced the Basic Policy for Promoting Business to Solve Local Challenges, and from that policy, a pilot.</p></div>
     </div>
 <div class="block reveal" data-exception="stat-block">
-      <div class="stats"><div class="stat">
+      <div class="stats stats--tiles"><div class="stat">
             <div class="stat__num">600<small>million yen</small></div>
             <div class="stat__gloss">total budget of the Regional Pilot Project</div>
           </div><div class="stat">
@@ -97,19 +105,19 @@
       <div class="eco" data-eco>
         <div class="eco__center">Local zebra companies and projects addressing local challenges</div>
         <div class="eco__ring">
-            <button type="button" aria-expanded="false" aria-controls="eco-0"><h3>Human resources support</h3><span class="arrow"></span></button>
+            <button class="row-toggle" type="button" aria-expanded="false" aria-controls="eco-0"><h3>Human resources support</h3><span class="disc" aria-hidden="true"><span class="arrow"></span></span></button>
             <div class="eco__body" id="eco-0" hidden>
               <ul><li>Borderless Japan</li><li>Venture for Japan</li><li>Community Foundation JAPAN</li><li>Companies interested in regional revitalization, including large corporations such as Japan Post and companies using the Corporate Furusato Nozei system</li></ul>
               <p class="eco__flow">Connect with communities</p>
             </div>
           </div><div class="eco__ring">
-            <button type="button" aria-expanded="false" aria-controls="eco-1"><h3>Funding providers</h3><span class="arrow"></span></button>
+            <button class="row-toggle" type="button" aria-expanded="false" aria-controls="eco-1"><h3>Funding providers</h3><span class="disc" aria-hidden="true"><span class="arrow"></span></span></button>
             <div class="eco__body" id="eco-1" hidden>
               <ul><li>Regional impact funds</li><li>Zebras and Company</li><li>Investors</li><li>Policy-based financial institutions</li><li>Foundations such as SIIF</li><li>Government subsidies</li></ul>
               <p class="eco__flow">Contribute to solving local challenges nationwide</p>
             </div>
           </div><div class="eco__ring">
-            <button type="button" aria-expanded="false" aria-controls="eco-2"><h3>Advisors</h3><span class="arrow"></span></button>
+            <button class="row-toggle" type="button" aria-expanded="false" aria-controls="eco-2"><h3>Advisors</h3><span class="disc" aria-hidden="true"><span class="arrow"></span></span></button>
             <div class="eco__body" id="eco-2" hidden>
               <ul><li>Borderless Japan</li><li>SIIF</li><li>SIMI</li><li>Zebras and Company</li></ul>
               <p class="eco__flow">Share know-how across communities that face similar issues; advance inclusive growth throughout Japan</p>
@@ -126,11 +134,13 @@
     </div>
   </section>
 <section class="stop" id="stop-2" aria-labelledby="stop-2-title">
-    <div class="container stop__grid">
+    <div class="bleed"><div class="band" aria-hidden="true"></div></div>
+    <div class="container">
       <div class="stop__head">
-        <span class="stop__num">Stop 02</span>
+        <span class="stop__num eyebrow">Stop 02</span>
         <h2 id="stop-2-title">What a zebra is<span class="gloss">The definition Z&amp;C refuses to fix</span></h2>
         <p class="stop__lede draft">A zebra company balances social and economic value. Z&amp;C has deliberately refused to turn that into a checklist, which is a position, not a gap.</p>
+        
       </div>
       <div class="stop__body">
         <div class="block reveal draft">
@@ -263,11 +273,13 @@
     </div>
   </section>
 <section class="stop" id="stop-3" aria-labelledby="stop-3-title">
-    <div class="container stop__grid">
+    <div class="bleed"><div class="band" aria-hidden="true"></div></div>
+    <div class="container">
       <div class="stop__head">
-        <span class="stop__num">Stop 03</span>
+        <span class="stop__num eyebrow">Stop 03</span>
         <h2 id="stop-3-title">How it is financed<span class="gloss">Money has a color</span></h2>
         <p class="stop__lede draft">Z&amp;C built its own capital structure because a fund could not do what it needed, then built instruments so zebra companies could raise money without accepting a timeline that kills the mission.</p>
+        
       </div>
       <div class="stop__body">
         <div class="block reveal">
@@ -330,7 +342,7 @@
 <div class="block reveal">
       <h3>What Z&amp;C asks before it invests</h3>
       <p class="measure draft">Fifteen questions in four categories, from Z&amp;C's zebra-style due diligence. The report's note: &quot;At the time of investment, perfection in all of these areas is not required. Rather, we consider whether Z&amp;C's own capabilities can complement any gaps and form a mutually supportive relationship.&quot;</p>
-      <button class="rubric__toggle" type="button" aria-expanded="false" aria-controls="rubric-body" data-rubric-toggle data-open="Show the fifteen questions" data-close="Hide the questions">Show the fifteen questions<span class="arrow"></span></button>
+      <button class="rubric__toggle" type="button" aria-expanded="false" aria-controls="rubric-body" data-rubric-toggle data-open="Show the fifteen questions" data-close="Hide the questions">Show the fifteen questions<span class="disc" aria-hidden="true"><span class="arrow"></span></span></button>
       <div class="rubric" id="rubric-body" hidden>
         <section class="rubric__group">
             <h4>Alignment with Z&amp;C's TOC</h4>
@@ -349,17 +361,19 @@
     </div>
 <div class="block reveal cta">
       <p class="measure draft">The full LIFE type1 structure, the capital structure diagrams and the due diligence process are in the report, pp.40-51.</p>
-      <a class="pill pill--outline" href="assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf" download>Download the report<span class="arrow"></span></a>
+      <a class="pill pill--outline pill--sm" href="assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf" download>Download the report<span class="arrow"></span></a>
     </div>
       </div>
     </div>
   </section>
 <section class="stop" id="stop-4" aria-labelledby="stop-4-title">
-    <div class="container stop__grid">
+    <div class="bleed"><div class="band" aria-hidden="true"></div></div>
+    <div class="container">
       <div class="stop__head">
-        <span class="stop__num">Stop 04</span>
+        <span class="stop__num eyebrow">Stop 04</span>
         <h2 id="stop-4-title">Three cases<span class="gloss">Persimmons, a coup, one golden share</span></h2>
         <p class="stop__lede draft">Three different kinds of proof with no overlap: a company that grew on metrics a term sheet ignores, a company that survived a coup by changing who owned it, and a company that sold itself while keeping its purpose out of the buyer's hands.</p>
+        
       </div>
       <div class="stop__body">
         <article class="block reveal case">
@@ -372,7 +386,7 @@
       <div class="measure draft"><p>Hitobito delivers non-standard peaches from Fukushima to Tokyo the same day, so they are not thrown away. In 2020 it launched a feminine care brand, &quot;Ashita watashi wa kaki no ki ni noboru&quot; (Tomorrow, I will climb a persimmon tree), made from the tannin-rich skins discarded in the production of Anpo-gaki, the region's semi-dried persimmons.</p><p>Before Z&amp;C, the company's refusal to put its own growth above everything else &quot;conflicted with the conventional world of startup investing and faced widespread criticism. It was labeled an 'excuse' or disparaged with comments like 'women aren't aspirational.'&quot; Z&amp;C, in Kobayashi's words, &quot;for the first time, affirmed our approach.&quot; The investment scheme LIFE type1, described in the previous stop, was designed for this deal.</p></div>
       <div data-exception="stat-block">
           <p class="eyebrow">What Hitobito and Z&amp;C measured, 2021 to 2023</p>
-          <div class="stats stats--case"><div class="stat">
+          <div class="stats stats--row"><div class="stat">
               <div class="stat__num">154%</div>
               <div class="stat__gloss">company-wide sales growth rate, 2021 to 2023; cosmetics business 274%</div>
             </div><div class="stat">
@@ -382,7 +396,7 @@
               <div class="stat__num">65,359<small>kg</small></div>
               <div class="stat__gloss">agricultural waste reduced, total 2021 to 2023</div>
             </div><div class="stat">
-              <div class="stat__num stat__num--long">453,148<small>yen</small></div>
+              <div class="stat__num">453,148<small>yen</small></div>
               <div class="stat__gloss">increase in annual net income per producer from transactions with Hitobito</div>
             </div><div class="stat">
               <div class="stat__num">3,980</div>
@@ -423,8 +437,8 @@
       <div class="measure draft"><p>Linklusion runs two businesses in Myanmar: B2B commerce that delivers food, daily necessities and medicine to small rural shops over a logistics network &quot;built up over six years, which utilizes not only land routes but also waterways to reach villages where even mail does not arrive,&quot; and a cloud system for microfinance institutions that lend to low-income households.</p><p>In February 2021 the military took power. The Series A Linklusion had planned for that year fell through; &quot;Myanmar was no longer a market where VCs could invest.&quot; The company had a year of runway. Kuroyanagi went to Z&amp;C's Suyama, who told him: &quot;This is a business that must be preserved. It can definitely work as an investment from a long-term perspective. The chances of fundraising are high.&quot; Seven months of Finance for Purpose followed, raising from a mix of angel investment, crowdfunding, loans and grants, and then Z&amp;C invested.</p></div>
       <div data-exception="stat-block">
           <p class="eyebrow">June 2021 to March 2024</p>
-          <div class="stats stats--case"><div class="stat">
-              <div class="stat__num stat__num--long">12 → 392</div>
+          <div class="stats stats--row"><div class="stat">
+              <div class="stat__num">12 → 392</div>
               <div class="stat__gloss">shareholders before Z&amp;C's investment and now, a 32.7-fold increase, mostly individual investors</div>
             </div><div class="stat">
               <div class="stat__num">515</div>
@@ -454,7 +468,7 @@
       <div class="measure draft"><p>Eiji Press is a publisher of business and social-issue books with a stated purpose, &quot;Publishing for Change,&quot; and a house culture of autonomy and dialogue; it published the Japanese edition of Reinventing Organizations. In 2024 it needed a successor owner and did not want to lose either.</p><p>On February 29, 2024, all of its shares went to KAYAC Inc. except one. That one share, converted into a golden share with veto rights over any change to the company's name or purpose, is held by Eiji Shuppan Wo Tsunagu Kai, a general incorporated association made up solely of Eiji Press employees. The purpose was written into the articles of incorporation as part of the deal. According to a March 2024 study by Z&amp;C, this was &quot;the first publicly reported case of its kind in Japan.&quot; Z&amp;C brought case studies of succession from around the world, among them Patagonia's transfer to an environmental nonprofit and <button class="term" type="button" aria-expanded="false" aria-controls="term-e2c-4">Exit to Community (E2C)</button><span class="term-def" id="term-e2c-4" hidden><strong>Exit to Community (E2C)</strong>A concept proposed by Nathan Schneider, a member of Zebras Unite. It refers to a model in which a company's ownership transitions from existing shareholders to a broader community such as local residents or employees. <span class="muted">(Glossary, pp.124-125)</span></span>; Takano says learning about them &quot;allowed us to think more flexibly,&quot; and the golden share came out of that. Z&amp;C's regular question through the process was &quot;What is most important to Eiji Press?&quot;</p></div>
       <div data-exception="stat-block">
           <p class="eyebrow">Eiji Press issued shares, excluding treasury stock: 5,801</p>
-          <div class="stats stats--case"><div class="stat">
+          <div class="stats stats--row"><div class="stat">
               <div class="stat__num">1</div>
               <div class="stat__gloss">share, with veto rights, held by the employees' association</div>
             </div><div class="stat">
@@ -473,17 +487,19 @@
     </div>
 <div class="block reveal cta">
       <p class="measure draft">Each company's logic model, the interviews with their stakeholders and Z&amp;C's own account of what it did are in the report, pp.62-101.</p>
-      <a class="pill pill--outline" href="assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf" download>Download the report<span class="arrow"></span></a>
+      <a class="pill pill--outline pill--sm" href="assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf" download>Download the report<span class="arrow"></span></a>
     </div>
       </div>
     </div>
   </section>
-<section class="stop stop--objection" id="stop-5" aria-labelledby="stop-5-title">
-    <div class="container stop__grid">
+<section class="stop stop--objection full" id="stop-5" aria-labelledby="stop-5-title">
+    <div class="bleed"><div class="band" aria-hidden="true"></div></div>
+    <div class="container">
       <div class="stop__head">
-        <span class="stop__num">Stop 05</span>
+        <span class="stop__num eyebrow">Stop 05</span>
         <h2 id="stop-5-title">The objection<span class="gloss">The question Z&amp;C cannot yet answer</span></h2>
         <p class="stop__lede draft">The strongest criticism of zebra companies is stated by one of Z&amp;C's own founding shareholders. She says she still cannot fully rebut it.</p>
+        
       </div>
       <div class="stop__body">
         <div class="block reveal"><blockquote class="quote quote--large quote--bare">
@@ -506,11 +522,13 @@
     </div>
   </section>
 <section class="stop" id="stop-6" aria-labelledby="stop-6-title">
-    <div class="container stop__grid">
+    <div class="bleed"><div class="band" aria-hidden="true"></div></div>
+    <div class="container">
       <div class="stop__head">
-        <span class="stop__num">Stop 06</span>
+        <span class="stop__num eyebrow">Stop 06</span>
         <h2 id="stop-6-title">Why Japan<span class="gloss">The ethic was already here</span></h2>
         <p class="stop__lede draft">The word was imported. The ethic was already here. That is why the idea moved faster in Japan than anywhere else, and why Japan is now positioned to send it back out.</p>
+        
       </div>
       <div class="stop__body">
         <div class="block reveal draft">
@@ -527,68 +545,50 @@
     </div>
 <div class="block reveal">
       <h3>2016 to 2024</h3>
-      <p class="measure draft">Two lanes, as in the report's own timeline spread. Tap a point for one sentence.</p>
-      <div class="timeline" data-timeline>
-        <div class="timeline__lanes" aria-hidden="true"><span>Global</span><span>Japan</span></div>
+      <p class="measure draft">Two lanes, as in the report's own timeline spread: what happened overseas, and what happened here.</p>
+      <div class="timeline">
         <ol class="timeline__track"><li class="timeline__point timeline__point--lane0">
-            <button type="button" data-tl="0" aria-expanded="false" aria-controls="tl-0">
-              <span class="timeline__year">2016</span>
-              <span class="timeline__dot"></span>
-              <span class="timeline__title">&quot;Sex and Startups&quot;</span>
-            </button>
-            <div class="timeline__body" id="tl-0" hidden><p>Jennifer Brandel and Mara Zepeda publish the blog post that starts the movement.</p><small>p.24</small></div>
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__year">2016<small>Global</small></span>
+            <span class="timeline__title">&quot;Sex and Startups&quot;</span>
+            <div class="timeline__body"><p>Jennifer Brandel and Mara Zepeda publish the blog post that starts the movement.</p><small>p.24</small></div>
           </li><li class="timeline__point timeline__point--lane0">
-            <button type="button" data-tl="1" aria-expanded="false" aria-controls="tl-1">
-              <span class="timeline__year">2017</span>
-              <span class="timeline__dot"></span>
-              <span class="timeline__title">&quot;Zebras Fix What Unicorns Break&quot;</span>
-            </button>
-            <div class="timeline__body" id="tl-1" hidden><p>The March 2017 article introduces zebra companies to the world; Zebras Unite forms.</p><small>p.24</small></div>
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__year">2017<small>Global</small></span>
+            <span class="timeline__title">&quot;Zebras Fix What Unicorns Break&quot;</span>
+            <div class="timeline__body"><p>The March 2017 article introduces zebra companies to the world; Zebras Unite forms.</p><small>p.24</small></div>
           </li><li class="timeline__point timeline__point--lane0">
-            <button type="button" data-tl="2" aria-expanded="false" aria-controls="tl-2">
-              <span class="timeline__year">2018</span>
-              <span class="timeline__dot"></span>
-              <span class="timeline__title">Skoll World Forum</span>
-            </button>
-            <div class="timeline__body" id="tl-2" hidden><p>Yoshi Tabuchi attends the &quot;Zebras Fix What Unicorns Break&quot; session in the UK in April and recognizes his own concerns.</p><small>p.24</small></div>
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__year">2018<small>Global</small></span>
+            <span class="timeline__title">Skoll World Forum</span>
+            <div class="timeline__body"><p>Yoshi Tabuchi attends the &quot;Zebras Fix What Unicorns Break&quot; session in the UK in April and recognizes his own concerns.</p><small>p.24</small></div>
           </li><li class="timeline__point timeline__point--lane1">
-            <button type="button" data-tl="3" aria-expanded="false" aria-controls="tl-3">
-              <span class="timeline__year">2019</span>
-              <span class="timeline__dot"></span>
-              <span class="timeline__title">Tokyo Zebras Unite</span>
-            </button>
-            <div class="timeline__body" id="tl-3" hidden><p>The Japan chapter is established in November 2019. &quot;Zebras&quot; becomes zebra kigyo.</p><small>p.24</small></div>
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__year">2019<small>Japan</small></span>
+            <span class="timeline__title">Tokyo Zebras Unite</span>
+            <div class="timeline__body"><p>The Japan chapter is established in November 2019. &quot;Zebras&quot; becomes zebra kigyo.</p><small>p.24</small></div>
           </li><li class="timeline__point timeline__point--lane1">
-            <button type="button" data-tl="4" aria-expanded="false" aria-controls="tl-4">
-              <span class="timeline__year">2021</span>
-              <span class="timeline__dot"></span>
-              <span class="timeline__title">Zebras and Company founded</span>
-            </button>
-            <div class="timeline__body" id="tl-4" hidden><p>March 12, 2021, Tokyo. Three co-founders, 88.5 million yen in capital.</p><small>p.6</small></div>
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__year">2021<small>Japan</small></span>
+            <span class="timeline__title">Zebras and Company founded</span>
+            <div class="timeline__body"><p>March 12, 2021, Tokyo. Three co-founders, 88.5 million yen in capital.</p><small>p.6</small></div>
           </li><li class="timeline__point timeline__point--lane1">
-            <button type="button" data-tl="5" aria-expanded="false" aria-controls="tl-5">
-              <span class="timeline__year">2022</span>
-              <span class="timeline__dot"></span>
-              <span class="timeline__title">First investment, LIFE type1</span>
-            </button>
-            <div class="timeline__body" id="tl-5" hidden><p>Z&amp;C invests in Hitobito in February 2022 and releases the LIFE type1 term sheet; ZEBRAHOOD 2022 is held. Zebra companies appear in METI's SME White Paper.</p><small>p.7, p.44</small></div>
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__year">2022<small>Japan</small></span>
+            <span class="timeline__title">First investment, LIFE type1</span>
+            <div class="timeline__body"><p>Z&amp;C invests in Hitobito in February 2022 and releases the LIFE type1 term sheet; ZEBRAHOOD 2022 is held. Zebra companies appear in METI's SME White Paper.</p><small>p.7, p.44</small></div>
           </li><li class="timeline__point timeline__point--lane1">
-            <button type="button" data-tl="6" aria-expanded="false" aria-controls="tl-6">
-              <span class="timeline__year">2023</span>
-              <span class="timeline__dot"></span>
-              <span class="timeline__title">National strategy</span>
-            </button>
-            <div class="timeline__body" id="tl-6" hidden><p>In June 2023 zebra companies are written into the Cabinet's Basic Policies for Economic and Fiscal Management and Reform.</p><small>p.54</small></div>
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__year">2023<small>Japan</small></span>
+            <span class="timeline__title">National strategy</span>
+            <div class="timeline__body"><p>In June 2023 zebra companies are written into the Cabinet's Basic Policies for Economic and Fiscal Management and Reform.</p><small>p.54</small></div>
           </li><li class="timeline__point timeline__point--lane1">
-            <button type="button" data-tl="7" aria-expanded="false" aria-controls="tl-7">
-              <span class="timeline__year">2024</span>
-              <span class="timeline__dot"></span>
-              <span class="timeline__title">Twenty regions</span>
-            </button>
-            <div class="timeline__body" id="tl-7" hidden><p>The SME Agency's 600-million-yen Regional Pilot Project selects 20 regions from more than 110 applications.</p><small>p.55</small></div>
+            <span class="timeline__dot" aria-hidden="true"></span>
+            <span class="timeline__year">2024<small>Japan</small></span>
+            <span class="timeline__title">Twenty regions</span>
+            <div class="timeline__body"><p>The SME Agency's 600-million-yen Regional Pilot Project selects 20 regions from more than 110 applications.</p><small>p.55</small></div>
           </li></ol>
-        <div class="timeline__detail" data-tl-detail aria-live="polite"></div>
-        <p class="timeline__legend"><span><span class="timeline__dot timeline__dot--legend" aria-hidden="true"></span>Global</span><span><span class="timeline__dot timeline__dot--legend timeline__dot--filled" aria-hidden="true"></span>Japan</span></p>
+        <p class="timeline__legend"><span><span class="timeline__dot timeline__dot--legend timeline__dot--open" aria-hidden="true"></span>Global</span><span><span class="timeline__dot timeline__dot--legend" aria-hidden="true"></span>Japan</span></p>
       </div>
     </div>
 <div class="block reveal"><blockquote class="quote">
@@ -599,11 +599,13 @@
     </div>
   </section>
 <section class="stop" id="stop-7" aria-labelledby="stop-7-title">
-    <div class="container stop__grid">
+    <div class="bleed"><div class="band" aria-hidden="true"></div></div>
+    <div class="container">
       <div class="stop__head">
-        <span class="stop__num">Stop 07</span>
+        <span class="stop__num eyebrow">Stop 07</span>
         <h2 id="stop-7-title">Your map<span class="gloss">Draw your own theory of change</span></h2>
         <p class="stop__lede draft">The report ends by telling readers to draw their own theory of change. This page hands you the pen.</p>
+        
       </div>
       <div class="stop__body">
         <div class="block reveal"><blockquote class="quote quote--large">
@@ -640,7 +642,7 @@
               <textarea id="ym-5" name="ym-5" rows="5" data-stage="Input" data-sub="Management capability" data-q="What knowledge, experience, and networks do the founder and management team possess in relation to the business they are pursuing? What additional capacities will be required going forward?" placeholder="Write as much or as little as you like." aria-label="What knowledge, experience, and networks do the founder and management team possess in relation to the business they are pursuing? What additional capacities will be required going forward?"></textarea>
             </fieldset>
           <div class="yourmap__nav">
-            <button class="arrow-btn arrow-btn--prev" type="button" data-ym-back aria-label="Back"><span class="arrow"></span></button>
+            <button class="disc disc--lg disc--prev" type="button" data-ym-back aria-label="Back"><span class="arrow"></span></button>
             <button class="pill" type="button" data-ym-next>Next<span class="arrow"></span></button>
             <button class="pill" type="submit" data-ym-finish hidden>Draw the map<span class="arrow"></span></button>
           </div>
@@ -663,32 +665,33 @@
       </div>
     </div>
   </section></main>
-<footer class="brandfield">
+<footer class="brandfield full">
     <div class="container">
+      <img class="brandfield__logo" src="assets/brand/zc-logo-white.png" alt="Zebras and Company" width="92" height="56">
       <h2 class="draft">Read the whole letter</h2>
-      <p class="measure-narrow" style="margin-top:var(--space-6);font-size:18px">Please turn these pages with your own questions in mind. The continuation of this journey surely includes you.</p>
-      <div class="hero__actions">
-        <a class="pill pill--white" href="assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf" download>Download the report<span class="arrow"></span></a>
+      <p class="brandfield__body">Please turn these pages with your own questions in mind. The continuation of this journey surely includes you.</p>
+      <div class="brandfield__actions">
+        <a class="pill pill--pink" href="assets/Zebras-and-Company-Impact-Journey-Report-2021-2023.pdf" download>Download the report<span class="arrow"></span></a>
       </div>
-      <p style="margin-top:var(--space-6);font-size:14px"><a href="https://forms.gle/2HHzPZTQGxc9rA54A">LIFE type1 term sheet</a> &nbsp;·&nbsp; <a href="https://www.zebrasand.co.jp/2345">LIFE type1, the full article</a> &nbsp;·&nbsp; <a href="https://www.zebrasand.co.jp/536">Finance for Purpose</a></p>
+      <p class="brandfield__links"><a href="https://forms.gle/2HHzPZTQGxc9rA54A">LIFE type1 term sheet</a> &nbsp;·&nbsp; <a href="https://www.zebrasand.co.jp/2345">LIFE type1, the full article</a> &nbsp;·&nbsp; <a href="https://www.zebrasand.co.jp/536">Finance for Purpose</a></p>
       <div class="footer-grid">
         <div><p class="eyebrow">Zebras and Company</p><ul><li><a href="https://www.zebrasand.co.jp/">zebrasand.co.jp</a></li><li>Zebras and Company Inc., established March 12, 2021, Tokyo</li></ul></div><div><p class="eyebrow">The report</p><ul><li>Written by Yohei Azakami, Yoshi Tabuchi, Sai Sakamoto, Sonoko Tanaka and the Z&amp;C team</li><li>Editorial design by Hirayama-san</li><li>Web experience by Smith &amp; Connors</li></ul></div><div><p class="eyebrow">Language</p><ul><li>English</li><li>日本語 (to come)</li></ul></div>
       </div>
-      <p style="margin-top:var(--space-7);font-size:12px;opacity:.8">All quotations, figures and names on this page are taken from the Zebras and Company Impact Journey Report 2021-2023, English edition. Page references appear in the sources list below.</p>
+      <p class="brandfield__fine">All quotations, figures and names on this page are taken from the Zebras and Company Impact Journey Report 2021-2023, English edition. Page references appear in the sources list below.</p>
     </div>
   </footer>
-<section class="sources" aria-label="Sources">
+<section class="sources full" aria-label="Sources">
     <div class="container">
       <p class="eyebrow">Sources in the report</p>
       <ul><li><b>Frame</b> · Statement panel · p.1, p.126</li><li><b>01. It worked</b> · Figures · p.6</li><li><b>01. It worked</b> · Prose · p.1, p.21, p.27</li><li><b>01. It worked</b> · What happened next · pp.54-55</li><li><b>01. It worked</b> · Figures · p.55</li><li><b>01. It worked</b> · Prose · p.55</li><li><b>01. It worked</b> · Who holds up a local zebra company · p.55</li><li><b>01. It worked</b> · Hideto Fujino · p.120</li><li><b>02. What a zebra is</b> · Prose · p.25</li><li><b>02. What a zebra is</b> · The 3 characteristics of zebra companies / The 4 characteristics of zebra management · p.25</li><li><b>02. What a zebra is</b> · Zebras and Company · p.25</li><li><b>02. What a zebra is</b> · Ten founders, one question · p.34</li><li><b>02. What a zebra is</b> · Parent, sibling, foal · p.30</li><li><b>02. What a zebra is</b> · Miai Kobayashi · p.62</li><li><b>02. What a zebra is</b> · Yohei Azakami · p.126</li><li><b>03. How it is financed</b> · Z&amp;C is not a fund · pp.40-41</li><li><b>03. How it is financed</b> · Money has a color · pp.50-51</li><li><b>03. How it is financed</b> · LIFE type1 · pp.44-45</li><li><b>03. How it is financed</b> · TOC × TOC · p.48</li><li><b>03. How it is financed</b> · Tomoyoshi Noda · p.109</li><li><b>03. How it is financed</b> · Two maps, three years apart · pp.12-13, 104-105</li><li><b>03. How it is financed</b> · What Z&amp;C asks before it invests · pp.46-47</li><li><b>03. How it is financed</b> · Download pointer · pp.40-51</li><li><b>04. Three cases · Hitobito</b> · Account · pp.62-67</li><li><b>04. Three cases · Hitobito</b> · Figures · p.64</li><li><b>04. Three cases · Hitobito</b> · Collaboration and coverage · pp.64-65</li><li><b>04. Three cases</b> · Two ledgers · pp.44, 59, 62, 64, 67</li><li><b>04. Three cases · Linklusion</b> · Account · pp.76-79</li><li><b>04. Three cases · Linklusion</b> · Figures · pp.77-79</li><li><b>04. Three cases · Linklusion</b> · Collaboration and coverage · pp.77, 79</li><li><b>04. Three cases · Eiji Press</b> · Account · pp.96-99</li><li><b>04. Three cases · Eiji Press</b> · Figures · p.99</li><li><b>04. Three cases · Eiji Press</b> · Collaboration and coverage · pp.97, 99</li><li><b>04. Three cases · Eiji Press</b> · Scheme · p.99</li><li><b>04. Three cases</b> · The other seven · pp.68-101</li><li><b>04. Three cases</b> · Download pointer · pp.62-101</li><li><b>05. The objection</b> · The question SIIF's stakeholders asked in 2021 · p.59</li><li><b>05. The objection</b> · Nanako Kudo · p.59</li><li><b>05. The objection</b> · Nanako Kudo · p.59</li><li><b>05. The objection</b> · Nanako Kudo · p.59</li><li><b>06. Why Japan</b> · Where the word came from · p.24, p.26</li><li><b>06. Why Japan</b> · Mara Zepeda · p.2</li><li><b>06. Why Japan</b> · Why it landed · p.31, p.80, p.105</li><li><b>06. Why Japan</b> · 2016 to 2024 · pp.6-7, 24, 44, 54-55</li><li><b>06. Why Japan</b> · Tomoyoshi Noda · p.111</li><li><b>07. Your map</b> · Zebras and Company · p.13</li><li><b>07. Your map</b> · Prose · p.12, p.36, p.48</li><li><b>07. Your map</b> · Draw your own map · pp.13, 36, 46-48</li><li><b>07. Your map</b> · Logic model stages · p.48</li><li><b>Closing</b> · Closing line · p.10</li></ul>
     </div>
   </section>
+</div>
 <script src="js/main.js" defer></script>
 <script src="js/gloss.js" defer></script>
 <script src="js/founders.js" defer></script>
 <script src="js/ecosystem.js" defer></script>
 <script src="js/ledgers.js" defer></script>
-<script src="js/timeline.js" defer></script>
 <script src="js/tocpair.js" defer></script>
 <script src="js/rubric.js" defer></script>
 <script src="js/yourmap.js" defer></script>
